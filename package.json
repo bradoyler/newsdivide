@@ -1,0 +1,27 @@
+{
+  "name": "newsmachine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard --verbose && node test",
+    "format": "standard --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "2.6.15",
+    "cron": "1.1.1",
+    "debug": "2.3.0",
+    "dotenv": "2.0.0",
+    "moment": "2.16.0",
+    "moment-timezone": "0.5.9",
+    "phantomjs-prebuilt": "2.1.13",
+    "standard": "8.5.0",
+    "webshot": "0.18.0"
+  },
+  "standard": {
+    "ignore": []
+  }
+}

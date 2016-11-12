@@ -1,0 +1,22 @@
+{
+  "images": [
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/abcnews.go.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.npr.org.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/idrudgereport.com",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.nbcnews.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.nbcnews.com_politics_2016-election.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.cnn.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.cnn.com_politics.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.foxnews.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.nytimes.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.washingtonpost.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/time.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.wsj.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/news.vice.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.latimes.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/qz.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/m.huffpost.com.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/newsblock.io.jpg",
+    "https://s3.amazonaws.com/cdn.newsblock.io/newsmachine/2016-11-12/www.bloomberg.com.jpg"
+  ]
+}
