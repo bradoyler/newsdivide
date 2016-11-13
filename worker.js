@@ -1,20 +1,18 @@
 var dotenv = require('dotenv');
 dotenv.config({silent: true});
 var CronJob = require('cron').CronJob
-var webshot = require('webshot');
-var persist = require('./lib/persist');
+var capture = require('./lib/capture');
 
 new CronJob('* 11 8-19 * * *', function(){
   run();
 }, null, true, 'America/New_York');
 
 function run() {
-//var saveStream = persist.saveStreamToFile;
-  var saveStream = persist.saveStreamToS3;
 
   var options = {
+    defaultWhiteBackground: true,
     errorIfStatusIsNot200: true,
-    timeout: 95000,
+    timeout: 55000,
     quality: 95,
     streamType: 'jpg',
     renderDelay: 1200,
@@ -38,40 +36,10 @@ function run() {
     'https://news.vice.com',
     'http://www.latimes.com',
     'http://qz.com',
-    'http://m.huffpost.com',
     'http://www.bloomberg.com',
+    'http://m.huffpost.com',
     'https://newsblock.io'
   ];
 
-  function forEachWebShot(urls) {
-    var url = urls.shift();
-
-    if (!url) {
-      return;
-    }
-
-    console.log('>> start webshot', url);
-
-    var filename = url.replace(/^(http|https):\/\//, '')
-        .replace(/\//g,'_') + '.jpg';
-
-    if (url === 'http://idrudgereport.com') {
-      options.shotOffset = { left: 0, right: 0, top: 280, bottom: 0 };
-    } else {
-      options.shotOffset = { left: 0, right: 0, top: 0, bottom: 0 };
-    }
-    var renderStream = webshot(url, options);
-
-    renderStream.on('error', function (err) {
-      console.log('stream.error!!', url, err);
-      forEachWebShot(urls);
-    });
-
-    saveStream(renderStream, filename, function (err, data) {
-      console.log('saved stream >>>', err, data);
-      forEachWebShot(urls);
-    });
-  }
-
-  forEachWebShot(pageUrls);
+  capture.forEachWebShot(pageUrls, options);
 }
