@@ -1,10 +1,6 @@
 {
   "pages":[
     {
-      "url":"http://abcnews.go.com",
-      "image":"abcnews.go.com.jpg"
-    },
-    {
       "url":"http://www.npr.org",
       "image":"www.npr.org.jpg"
     },
@@ -72,6 +68,10 @@
     {
       "url":"https://newsblock.io",
       "image":"newsblock.io.jpg"
+    },
+    {
+      "url":"http://abcnews.go.com",
+      "image":"abcnews.go.com.jpg"
     }
   ]
 }
