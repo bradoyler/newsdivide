@@ -7,7 +7,7 @@ var manifest = require('../lib/manifest.json');
 var options = {
   defaultWhiteBackground: true,
   errorIfStatusIsNot200: true,
-  timeout: 21000,
+  timeout: 65000,
   quality: 95,
   streamType: 'jpg',
   renderDelay: 200,

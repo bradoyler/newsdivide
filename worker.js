@@ -12,7 +12,7 @@ var jobA = new CronJob({
     var options = {
       defaultWhiteBackground: true,
       errorIfStatusIsNot200: true,
-      timeout: 45000,
+      timeout: 65000,
       quality: 95,
       streamType: 'jpg',
       renderDelay: 1200,
