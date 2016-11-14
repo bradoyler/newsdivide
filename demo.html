@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://code.jquery.com/jquery.min.js"></script>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <meta name="description" content="Snapshot of all major news sites">
+ <meta property="og:image" content=""/>
+ <title>Newsmachine</title>
+</head>
+<body>
+  <div class='container' id='images'></div>
+
+  <script type="text/javascript">
+  $(function(){
+    var hostPath = 'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/';
+    var dd = new Date();
+    var daySlug = dd.getFullYear()+'-'+ (dd.getMonth()+1) +'-'+ dd.getDate(); //2016-11-13
+    var baseUrl = hostPath + daySlug + '/';
+    var ajaxOptions = {
+      url:'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/manifest.json',
+      success: function (data) {
+        data.images.forEach(function(imgUrl){
+          $('#images').append('<img src="'+ baseUrl + imgUrl +'" />');
+        });
+      },
+      error: function (resp, err, msg) {
+        console.log('err:', err);
+      }
+    };
+    $.ajax(ajaxOptions);
+  });
+  </script>
+
+</body>
+</html>
