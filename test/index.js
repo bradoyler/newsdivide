@@ -1,6 +1,7 @@
 var dotenv = require('dotenv');
 dotenv.config({silent: true});
 var capture = require('../lib/capture');
+var manifest = require('../lib/manifest.json');
 // var debug = require('debug')('test');
 
 var options = {
@@ -14,25 +15,5 @@ var options = {
   userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
 };
 
-var pageUrls = [
-  'http://abcnews.go.com',
-  'http://www.npr.org',
-  'http://idrudgereport.com',
-  'http://www.nbcnews.com',
-  'http://www.nbcnews.com/politics/2016-election',
-  'http://www.cnn.com',
-  'http://www.cnn.com/politics',
-  'http://www.foxnews.com',
-  'http://www.nytimes.com',
-  'https://www.washingtonpost.com',
-  'http://time.com',
-  'http://www.wsj.com',
-  'https://news.vice.com',
-  'http://www.latimes.com',
-  'http://qz.com',
-  'http://www.bloomberg.com',
-  'http://m.huffpost.com',
-  'https://newsblock.io'
-];
 
-capture.forEachWebShot(pageUrls, options);
+capture.forEachWebShot(manifest.pages, options);

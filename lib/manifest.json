@@ -1,25 +1,5 @@
 {
-  "images": [
-    "abcnews.go.com.jpg",
-    "www.npr.org.jpg",
-    "idrudgereport.com.jpg",
-    "www.nbcnews.com.jpg",
-    "www.nbcnews.com_politics_2016-election.jpg",
-    "www.cnn.com.jpg",
-    "www.cnn.com_politics.jpg",
-    "www.foxnews.com.jpg",
-    "www.nytimes.com.jpg",
-    "www.washingtonpost.com.jpg",
-    "time.com.jpg",
-    "www.wsj.com.jpg",
-    "news.vice.com.jpg",
-    "www.latimes.com.jpg",
-    "qz.com.jpg",
-    "m.huffpost.com.jpg",
-    "newsblock.io.jpg",
-    "www.bloomberg.com.jpg"
-  ],
-  "sites":[
+  "pages":[
     {
       "url":"http://abcnews.go.com",
       "image":"abcnews.go.com.jpg"
@@ -30,7 +10,8 @@
     },
     {
       "url":"http://idrudgereport.com",
-      "image":"idrudgereport.com.jpg"
+      "image":"idrudgereport.com.jpg",
+      "options": {"shotOffset": { "left": 0, "right": 0, "top": 280, "bottom": 0 }}
     },
     {
       "url":"http://www.nbcnews.com",
