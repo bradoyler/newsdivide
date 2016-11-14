@@ -15,7 +15,7 @@ var jobA = new CronJob({
       timeout: 65000,
       quality: 95,
       streamType: 'jpg',
-      renderDelay: 1200,
+      renderDelay: 1800,
       screenSize: { width: 375, height: 667 },
       userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
     };
