@@ -7,7 +7,7 @@ var manifest = require('./lib/manifest.json');
 console.log('starting CRON...');
 
 var jobA = new CronJob({
-  cronTime: '1 28 8-19 * * *',
+  cronTime: '1 20 10-20 * * *',
   onTick: function () {
     var options = {
       defaultWhiteBackground: true,
