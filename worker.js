@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 var dotenv = require('dotenv');
 dotenv.config({silent: true});
 var CronJob = require('cron').CronJob;
@@ -6,7 +7,7 @@ var manifest = require('./lib/manifest.json');
 
 console.log('starting CRON...');
 
-var jobA = new CronJob('1 2 10-22 * * *', function () {
+var jobA = new CronJob('1 2 9-20 * * *', function () {
   var options = {
     defaultWhiteBackground: true,
     errorIfStatusIsNot200: true,
@@ -20,5 +21,3 @@ var jobA = new CronJob('1 2 10-22 * * *', function () {
 
   capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
-
-//jobA.start();
