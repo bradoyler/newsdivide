@@ -4,20 +4,23 @@ dotenv.config({silent: true});
 var CronJob = require('cron').CronJob;
 var capture = require('./lib/capture');
 var manifest = require('./lib/manifest.json');
+const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
+const cronScheduleA = '1 2 1,6,9,12,14,16,18,20 * * *';
 
-console.log('starting CRON...');
+const defaults = {
+  defaultWhiteBackground: true,
+  errorIfStatusIsNot200: true,
+  timeout: 65000,
+  quality: 95,
+  streamType: 'jpg',
+  renderDelay: 1800,
+  screenSize: { width: 375, height: 667 },
+  userAgent: userAgent
+};
 
-var jobA = new CronJob('1 2 9-20 * * *', function () {
-  var options = {
-    defaultWhiteBackground: true,
-    errorIfStatusIsNot200: true,
-    timeout: 65000,
-    quality: 95,
-    streamType: 'jpg',
-    renderDelay: 1800,
-    screenSize: { width: 375, height: 667 },
-    userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
-  };
+console.log('starting up CRON jobs...');
 
+var jobA = new CronJob(cronScheduleA, function () {
+  var options = defaults;
   capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
