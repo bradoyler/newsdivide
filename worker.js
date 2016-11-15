@@ -6,7 +6,7 @@ var manifest = require('./lib/manifest.json');
 
 console.log('starting CRON...');
 
-var jobA = new CronJob('1 2 10-20 * * *', function () {
+var jobA = new CronJob('1 2 10-22 * * *', function () {
   var options = {
     defaultWhiteBackground: true,
     errorIfStatusIsNot200: true,
