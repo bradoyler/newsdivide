@@ -20,7 +20,8 @@ const defaults = {
   userAgent: userAgent
 };
 
-console.log('starting up CRON jobs...');
+console.log('starting...');
+capture.forEachWebShot(manifest.pages, defaults);
 
 var jobA = new CronJob(cronScheduleA, function () {
   var options = defaults;
