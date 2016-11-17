@@ -6,7 +6,7 @@ var capture = require('./lib/capture');
 var manifest = require('./lib/manifest.json');
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
 const cronScheduleA = '1 2 1,6 * * *';
-const cronScheduleB = '1 2 9-18,20 * * *';
+const cronScheduleB = '1 2 9-18 * * *';
 const cronScheduleC = '1 2 20 * * *';
 
 const defaults = {
