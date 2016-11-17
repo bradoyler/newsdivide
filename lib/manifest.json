@@ -3,7 +3,7 @@
     {
       "url":"http://www.breitbart.com",
       "image":"www.breitbart.com.jpg",
-      "options": {"css":"div#BBStoreLead {display: none;}"}
+      "options": {"customCSS":"div#BBStoreLead {display: none;}"}
     },
     {
       "url":"http://www.theblaze.com",
@@ -29,7 +29,8 @@
     },
     {
       "url":"http://www.nbcnews.com",
-      "image":"www.nbcnews.com.jpg"
+      "image":"www.nbcnews.com.jpg",
+      "options": {"customCSS":".ad_wrapper{display:none}"}
     },
     {
       "url":"http://www.nbcnews.com/politics/2016-election",
