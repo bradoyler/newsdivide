@@ -68,7 +68,8 @@
     },
     {
       "url":"https://news.vice.com",
-      "image":"news.vice.com.jpg"
+      "image":"news.vice.com.jpg",
+      "options": {"customCSS":".ad_wrapper{display:none}"}
     },
     {
       "url":"http://www.latimes.com",
