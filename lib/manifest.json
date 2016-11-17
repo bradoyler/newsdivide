@@ -12,7 +12,7 @@
     {
       "url":"http://dailycaller.com",
       "image":"dailycaller.com.jpg",
-      "options": {"timeout": 122000}
+      "options": {"timeout": 72000}
     },
     {
       "url":"http://www.infowars.com",
@@ -58,7 +58,7 @@
     {
       "url":"http://time.com",
       "image":"time.com.jpg",
-      "options": {"timeout": 122000}
+      "options": {"timeout": 72000}
     },
     {
       "url":"http://www.wsj.com",
@@ -101,13 +101,13 @@
       "image":"newrepublic.com.jpg"
     },
     {
-      "url":"http://www.slate.com",
-      "image":"www.slate.com.jpg"
-    },
-    {
       "url":"http://www.motherjones.com/",
       "image":"www.motherjones.com.jpg",
-      "options": {"timeout": 111000}
+      "options": {"timeout": 71000}
+    },
+    {
+      "url":"http://www.slate.com",
+      "image":"www.slate.com.jpg"
     }
   ]
 }
