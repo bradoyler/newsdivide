@@ -57,7 +57,8 @@
     },
     {
       "url":"http://time.com",
-      "image":"time.com.jpg"
+      "image":"time.com.jpg",
+      "options": {"timeout": 122000}
     },
     {
       "url":"http://www.wsj.com",
@@ -105,7 +106,8 @@
     },
     {
       "url":"http://www.motherjones.com/",
-      "image":"www.motherjones.com.jpg"
+      "image":"www.motherjones.com.jpg",
+      "options": {"timeout": 111000}
     }
   ]
 }
