@@ -1,6 +1,24 @@
 {
   "pages":[
     {
+      "url":"http://www.breitbart.com",
+      "image":"www.breitbart.com.jpg",
+      "options": {"css":"div#BBStoreLead {display: none;}"}
+    },
+    {
+      "url":"http://www.theblaze.com",
+      "image":"www.theblaze.com.jpg"
+    },
+    {
+      "url":"http://dailycaller.com",
+      "image":"dailycaller.com.jpg",
+      "options": {"timeout": 122000}
+    },
+    {
+      "url":"http://www.infowars.com",
+      "image":"www.infowars.com.jpg"
+    },
+    {
       "url":"http://www.npr.org",
       "image":"www.npr.org.jpg"
     },
@@ -72,6 +90,22 @@
     {
       "url":"http://abcnews.go.com",
       "image":"abcnews.go.com.jpg"
+    },
+    {
+      "url":"http://www.cbsnews.com",
+      "image":"www.cbsnews.com/.jpg"
+    },
+    {
+      "url":"https://newrepublic.com",
+      "image":"newrepublic.com.jpg"
+    },
+    {
+      "url":"http://www.slate.com",
+      "image":"www.slate.com.jpg"
+    },
+    {
+      "url":"http://www.motherjones.com/",
+      "image":"www.motherjones.com.jpg"
     }
   ]
 }

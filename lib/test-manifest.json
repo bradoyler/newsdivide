@@ -1,0 +1,9 @@
+{
+  "pages":[
+    {
+      "url":"http://www.drudgereport.com",
+      "image":"idrudgereport.com.jpg",
+      "options": {"shotOffset": { "left": 0, "right": 0, "top": 280, "bottom": 0 }}
+    }
+  ]
+}

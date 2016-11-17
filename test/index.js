@@ -1,8 +1,8 @@
 var dotenv = require('dotenv');
 dotenv.config({silent: true});
 var capture = require('../lib/capture');
-var manifest = require('../lib/manifest.json');
-// var debug = require('debug')('test');
+var manifest = require('../lib/test-manifest.json');
+//var debug = require('debug')('test');
 
 var options = {
   defaultWhiteBackground: true,
