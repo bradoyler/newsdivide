@@ -62,7 +62,8 @@
     },
     {
       "url":"http://www.wsj.com",
-      "image":"www.wsj.com.jpg"
+      "image":"www.wsj.com.jpg",
+      "options": {"renderDelay": 10}
     },
     {
       "url":"https://news.vice.com",
@@ -101,8 +102,8 @@
       "image":"newrepublic.com.jpg"
     },
     {
-      "url":"http://www.motherjones.com/",
-      "image":"www.motherjones.com.jpg",
+      "url":"http://m.motherjones.com/m",
+      "image":"m.motherjones.com.jpg",
       "options": {"timeout": 71000}
     },
     {
