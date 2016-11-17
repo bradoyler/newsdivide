@@ -73,11 +73,13 @@
     },
     {
       "url":"http://www.latimes.com",
-      "image":"www.latimes.com.jpg"
+      "image":"www.latimes.com.jpg",
+      "options": {"customCSS":".trb_masthead_adBanner{display:none}"}
     },
     {
       "url":"http://qz.com",
-      "image":"qz.com.jpg"
+      "image":"qz.com.jpg",
+      "options": {"customCSS":"#marquee{display:none}"}
     },
     {
       "url":"http://www.bloomberg.com",
@@ -85,7 +87,8 @@
     },
     {
       "url":"http://m.huffpost.com",
-      "image":"m.huffpost.com.jpg"
+      "image":"m.huffpost.com.jpg",
+      "options": {"customCSS":".advertisement{display:none}"}
     },
     {
       "url":"https://newsblock.io",
