@@ -28,6 +28,14 @@
       "options": {"shotOffset": { "left": 0, "right": 0, "top": 280, "bottom": 0 }}
     },
     {
+      "url":"http://www.drudgereport.com",
+      "image":"www.drudgereport.com.jpg",
+      "options": {
+            "shotOffset": { "left": 0, "right": 0, "top": 130, "bottom": 0 },
+            "customCSS": "html{zoom: 0.45;}"
+       }
+    },
+    {
       "url":"http://www.nbcnews.com",
       "image":"www.nbcnews.com.jpg",
       "options": {"customCSS":".ad_wrapper{display:none}"}

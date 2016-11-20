@@ -2,8 +2,11 @@
   "pages":[
     {
       "url":"http://www.drudgereport.com",
-      "image":"idrudgereport.com.jpg",
-      "options": {"shotOffset": { "left": 0, "right": 0, "top": 280, "bottom": 0 }}
+      "image":"www.drudgereport.com.jpg",
+      "options": {
+            "shotOffset": { "left": 0, "right": 0, "top": 130, "bottom": 0 },
+            "customCSS": "html{zoom: 0.45}"
+       }
     }
   ]
 }
