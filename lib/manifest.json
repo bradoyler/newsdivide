@@ -113,7 +113,7 @@
     {
       "url":"http://m.motherjones.com/m",
       "image":"m.motherjones.com.jpg",
-      "options": {"timeout": 71000}
+      "options": {"timeout": 71000, "customCSS":"#AT_OVERLAY_LAYER{display:none;}"}
     },
     {
       "url":"http://www.slate.com",
