@@ -58,11 +58,6 @@
       "image":"www.washingtonpost.com.jpg"
     },
     {
-      "url":"http://time.com",
-      "image":"time.com.jpg",
-      "options": {"timeout": 72000}
-    },
-    {
       "url":"http://www.wsj.com",
       "image":"www.wsj.com.jpg",
       "options": {"renderDelay": 10}

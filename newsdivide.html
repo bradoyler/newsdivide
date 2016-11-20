@@ -23,10 +23,7 @@
 
   <script type="text/javascript">
   $(function(){
-    var hostPath = 'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/';
-    var dd = new Date();
-    var daySlug = dd.getFullYear()+'-'+ (dd.getMonth()+1) +'-'+ dd.getDate(); //2016-11-13
-    var baseUrl = hostPath + daySlug + '/';
+    var baseUrl = 'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/latest/';
     var ajaxOptions = {
       url:'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/left-right.json',
       success: function (data) {
