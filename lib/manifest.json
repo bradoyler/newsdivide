@@ -46,7 +46,8 @@
     },
     {
       "url":"http://www.foxnews.com",
-      "image":"www.foxnews.com.jpg"
+      "image":"www.foxnews.com.jpg",
+      "options": {"renderDelay": 2500}
     },
     {
       "url":"http://www.nytimes.com",

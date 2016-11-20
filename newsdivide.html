@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://code.jquery.com/jquery.min.js"></script>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <meta name="description" content="Snapshot of both sides of Politics">
+ <meta property="og:image" content=""/>
+ <title>News Divide</title>
+</head>
+<body>
+  <div class='container'>
+    <div class="row">
+      <div class="left_sites col-xs-6"></div>
+      <div class="right_sites col-xs-6"></div>
+  </div>
+  </div>
+
+  <script type="text/javascript">
+  $(function(){
+    var hostPath = 'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/';
+    var dd = new Date();
+    var daySlug = dd.getFullYear()+'-'+ (dd.getMonth()+1) +'-'+ dd.getDate(); //2016-11-13
+    var baseUrl = hostPath + daySlug + '/';
+    var ajaxOptions = {
+      url:'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/left-right.json',
+      success: function (data) {
+        data.left_sites.forEach(function(page){
+          $('.left_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+        });
+
+        data.right_sites.forEach(function(page){
+          $('.right_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+        });
+      },
+      error: function (resp, err, msg) {
+        console.log('err:', err);
+      }
+    };
+    $.ajax(ajaxOptions);
+  });
+  </script>
+
+</body>
+</html>

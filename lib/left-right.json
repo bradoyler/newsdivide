@@ -1,5 +1,5 @@
 {
-  "leftsites":[
+  "left_sites":[
     {
       "url":"http://www.npr.org",
       "image":"www.npr.org.jpg"
@@ -21,15 +21,14 @@
       "image":"news.vice.com.jpg"
     },
     {
-      "url":"http://www.motherjones.com/",
-      "image":"www.motherjones.com.jpg"
+      "url":"http://www.motherjones.com",
+      "image":"m.motherjones.com.jpg"
     }
   ],
   "right_sites": [
     {
       "url":"http://idrudgereport.com",
-      "image":"idrudgereport.com.jpg",
-      "options": {"shotOffset": { "left": 0, "right": 0, "top": 280, "bottom": 0 }}
+      "image":"idrudgereport.com.jpg"
     },
     {
       "url":"http://www.foxnews.com",
