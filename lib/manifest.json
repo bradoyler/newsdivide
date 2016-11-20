@@ -92,7 +92,7 @@
     {
       "url":"http://m.huffpost.com",
       "image":"m.huffpost.com.jpg",
-      "options": {"customCSS":".advertisement{display:none}"}
+      "options": {"customCSS":".advertisement{display:none;} #adsDiv0{display:none;}"}
     },
     {
       "url":"https://newsblock.io",
