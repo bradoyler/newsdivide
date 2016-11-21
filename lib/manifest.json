@@ -51,8 +51,8 @@
       "options":{"customCSS":".advert--pencil{display:none}"}
     },
     {
-      "url":"http://www.nbcnews.com/politics/2016-election",
-      "image":"www.nbcnews.com_politics_2016-election.jpg"
+      "url":"http://www.nbcnews.com/politics",
+      "image":"www.nbcnews.com_politics.jpg"
     },
     {
       "url":"http://www.cnn.com",
@@ -123,11 +123,12 @@
     {
       "url":"http://m.motherjones.com/m",
       "image":"m.motherjones.com.jpg",
-      "options": {"timeout": 71000, "renderDelay": 200, "customCSS":"#AT_OVERLAY_LAYER{display:none;} #AT_OVERLAY_BACKGROUND{display:none;}"}
+      "options": {"timeout": 71000, "renderDelay": 200, "customCSS": "#AT_OVERLAY_LAYER{display:none;} #AT_OVERLAY_BACKGROUND{display:none;}"}
     },
     {
       "url":"http://www.slate.com",
-      "image":"www.slate.com.jpg"
+      "image":"www.slate.com.jpg",
+      "options": {"customCSS": ".ad{display:none !important;}"}
     }
   ]
 }
