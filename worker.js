@@ -21,7 +21,6 @@ const defaults = {
 };
 
 console.log('starting...');
-capture.forEachWebShot(manifest.pages, defaults);
 
 var jobA = new CronJob(cronScheduleA, function () {
   var options = defaults;
@@ -37,3 +36,5 @@ var jobC = new CronJob(cronScheduleC, function () {
   var options = defaults;
   capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
+
+capture.forEachWebShot(manifest.pages, defaults);
