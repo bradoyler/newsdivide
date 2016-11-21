@@ -1,6 +1,36 @@
 {
   "pages":[
     {
+      "url": "https://www.apnews.com",
+      "image": "www.apnews.com.jpg"
+    },
+    {
+      "url":"http://www.npr.org",
+      "image":"www.npr.org.jpg"
+    },
+    {
+      "url":"http://www.cnn.com",
+      "image":"www.cnn.com.jpg"
+    },
+    {
+      "url": "http://mobile.reuters.com",
+      "image": "mobile.reuters.com.jpg"
+    }
+    {
+      "url":"http://www.nbcnews.com",
+      "image":"www.nbcnews.com.jpg",
+      "options": {"customCSS":".ad_wrapper{display:none}"}
+    },
+    {
+      "url":"https://www.washingtonpost.com",
+      "image":"www.washingtonpost.com.jpg"
+    },
+    {
+      "url":"http://www.wsj.com",
+      "image":"www.wsj.com.jpg",
+      "options": {"renderDelay": 10}
+    },
+    {
       "url":"http://www.breitbart.com",
       "image":"www.breitbart.com.jpg",
       "options": {"customCSS":"#BBStoreLead{display:none;} header{height:0px} "}
@@ -24,10 +54,6 @@
       "image":"www.infowars.com.jpg"
     },
     {
-      "url":"http://www.npr.org",
-      "image":"www.npr.org.jpg"
-    },
-    {
       "url":"http://idrudgereport.com",
       "image":"idrudgereport.com.jpg",
       "options": {"shotOffset": { "left": 0, "right": 0, "top": 280, "bottom": 0 }}
@@ -41,11 +67,6 @@
        }
     },
     {
-      "url":"http://www.nbcnews.com",
-      "image":"www.nbcnews.com.jpg",
-      "options": {"customCSS":".ad_wrapper{display:none}"}
-    },
-    {
       "url": "http://www.msnbc.com",
       "image": "www.msnbc.com.jpg",
       "options":{"customCSS":".advert--pencil{display:none}"}
@@ -53,10 +74,6 @@
     {
       "url":"http://www.nbcnews.com/politics",
       "image":"www.nbcnews.com_politics.jpg"
-    },
-    {
-      "url":"http://www.cnn.com",
-      "image":"www.cnn.com.jpg"
     },
     {
       "url":"http://www.cnn.com/politics",
@@ -70,15 +87,6 @@
     {
       "url":"http://www.nytimes.com",
       "image":"www.nytimes.com.jpg"
-    },
-    {
-      "url":"https://www.washingtonpost.com",
-      "image":"www.washingtonpost.com.jpg"
-    },
-    {
-      "url":"http://www.wsj.com",
-      "image":"www.wsj.com.jpg",
-      "options": {"renderDelay": 10}
     },
     {
       "url":"https://news.vice.com",
