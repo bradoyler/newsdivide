@@ -23,16 +23,19 @@ const defaults = {
 console.log('starting...');
 
 var jobA = new CronJob(cronScheduleA, function () {
+  console.log('>>> cronA', new Date());
   var options = defaults;
   capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
 
 var jobB = new CronJob(cronScheduleB, function () {
+  console.log('>>> cronB', new Date());
   var options = defaults;
   capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
 
 var jobC = new CronJob(cronScheduleC, function () {
+  console.log('>>> cronC', new Date());
   var options = defaults;
   capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
