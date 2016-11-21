@@ -3,16 +3,17 @@
     {
       "url":"http://www.breitbart.com",
       "image":"www.breitbart.com.jpg",
-      "options": {"customCSS":"div#BBStoreLead {display: none;}"}
+      "options": {"customCSS":"#BBStoreLead{display:none;} header{height:0px} "}
     },
     {
       "url":"http://www.theblaze.com",
-      "image":"www.theblaze.com.jpg"
+      "image":"www.theblaze.com.jpg",
+      "options": {"customCSS":".ad{display:none !important;} .top-ad{display:none !important;}"}
     },
     {
       "url":"http://dailycaller.com",
       "image":"dailycaller.com.jpg",
-      "options": {"timeout": 72000, "customCSS":"ad_container{display: none;}"}
+      "options": {"timeout": 72000, "customCSS":".ad_container{display:none;}"}
     },
     {
       "url": "http://www.thegatewaypundit.com",
@@ -122,7 +123,7 @@
     {
       "url":"http://m.motherjones.com/m",
       "image":"m.motherjones.com.jpg",
-      "options": {"timeout": 71000, "renderDelay": 200, "customCSS":"#AT_OVERLAY_LAYER{display:none;}"}
+      "options": {"timeout": 71000, "renderDelay": 200, "customCSS":"#AT_OVERLAY_LAYER{display:none;} #AT_OVERLAY_BACKGROUND{display:none;}"}
     },
     {
       "url":"http://www.slate.com",
