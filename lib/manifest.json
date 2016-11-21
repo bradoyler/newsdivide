@@ -65,7 +65,7 @@
     {
       "url":"http://www.foxnews.com",
       "image":"www.foxnews.com.jpg",
-      "options": {"renderDelay": 3500}
+      "options": {"renderDelay": 3500, "customCSS": ".advertisement{display:none}"}
     },
     {
       "url":"http://www.nytimes.com",
