@@ -5,6 +5,11 @@
       "image":"www.npr.org.jpg"
     },
     {
+      "url": "http://www.msnbc.com",
+      "image": "www.msnbc.com.jpg",
+      "options":{"customCSS":".advert--pencil{display:none}"}
+    },
+    {
       "url":"https://newrepublic.com",
       "image":"newrepublic.com.jpg"
     },
@@ -45,6 +50,10 @@
     {
       "url":"http://dailycaller.com",
       "image":"dailycaller.com.jpg"
+    },
+    {
+      "url": "http://www.thegatewaypundit.com",
+      "image": "www.thegatewaypundit.com.jpg"
     },
     {
       "url":"http://www.infowars.com",

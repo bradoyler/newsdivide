@@ -12,7 +12,11 @@
     {
       "url":"http://dailycaller.com",
       "image":"dailycaller.com.jpg",
-      "options": {"timeout": 72000}
+      "options": {"timeout": 72000, "customCSS":"ad_container{display: none;}"}
+    },
+    {
+      "url": "http://www.thegatewaypundit.com",
+      "image": "www.thegatewaypundit.com.jpg"
     },
     {
       "url":"http://www.infowars.com",
@@ -39,6 +43,11 @@
       "url":"http://www.nbcnews.com",
       "image":"www.nbcnews.com.jpg",
       "options": {"customCSS":".ad_wrapper{display:none}"}
+    },
+    {
+      "url": "http://www.msnbc.com",
+      "image": "www.msnbc.com.jpg",
+      "options":{"customCSS":".advert--pencil{display:none}"}
     },
     {
       "url":"http://www.nbcnews.com/politics/2016-election",
