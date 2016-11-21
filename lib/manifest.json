@@ -2,7 +2,8 @@
   "pages":[
     {
       "url": "https://www.apnews.com",
-      "image": "www.apnews.com.jpg"
+      "image": "www.apnews.com.jpg",
+      "options": {"renderDelay": 3500}
     },
     {
       "url":"http://www.npr.org",

@@ -6,8 +6,7 @@
     },
     {
       "url": "http://www.msnbc.com",
-      "image": "www.msnbc.com.jpg",
-      "options":{"customCSS":".advert--pencil{display:none}"}
+      "image": "www.msnbc.com.jpg"
     },
     {
       "url":"https://newrepublic.com",
@@ -62,6 +61,14 @@
   ],
   "center_sites": [
     {
+      "url": "https://www.apnews.com",
+      "image": "www.apnews.com.jpg"
+    },
+    {
+      "url": "http://mobile.reuters.com",
+      "image": "mobile.reuters.com.jpg"
+    },
+    {
       "url":"http://www.cnn.com",
       "image":"www.cnn.com.jpg"
     },
@@ -70,16 +77,12 @@
       "image":"www.nbcnews.com.jpg"
     },
     {
-      "url":"http://www.nytimes.com",
-      "image":"www.nytimes.com.jpg"
-    },
-    {
       "url":"https://www.washingtonpost.com",
       "image":"www.washingtonpost.com.jpg"
     },
     {
       "url":"http://www.cbsnews.com",
-      "image":"www.cbsnews.com/.jpg"
+      "image":"www.cbsnews.com.jpg"
     },
     {
       "url":"http://abcnews.go.com",
