@@ -61,10 +61,6 @@
   ],
   "center_sites": [
     {
-      "url": "https://www.apnews.com",
-      "image": "www.apnews.com.jpg"
-    },
-    {
       "url": "http://mobile.reuters.com",
       "image": "mobile.reuters.com.jpg"
     },
@@ -87,6 +83,10 @@
     {
       "url":"http://abcnews.go.com",
       "image":"abcnews.go.com.jpg"
+    },
+    {
+      "url":"http://www.nytimes.com",
+      "image":"www.nytimes.com.jpg"
     }
   ]
 }

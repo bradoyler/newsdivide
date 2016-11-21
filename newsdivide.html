@@ -5,12 +5,21 @@
  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">-->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
-
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width">
- <meta name="description" content="Snapshot of both sides of Politics">
- <meta property="og:image" content=""/>
- <title>News Divide</title>
+ <meta name="description" content="Snapshots of the Left, Right & Center of News">
+ <meta property="og:url" content="http://bradoyler.github.io/newsdivide.html"/>
+ <meta property="og:title" content="The News Divide"/>
+ <meta property="og:description" content="Snapshots of the Left, Right & Center of News"/>
+ <meta property="og:image" content="http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/newsdivide_image.jpg"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@bradoyler"/>
+<meta name="twitter:title" content="The News Divide"/>
+<meta name="twitter:description" content="Snapshots of the Left, Right & Center of News"/>
+<meta name="twitter:creator" content="@bradoyler"/>
+<meta name="twitter:domain" content="bradoyler.github.io"/>
+<meta name="twitter:image" content="http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/newsdivide_image.jpg"/>
+ <title>The News Divide</title>
 </head>
 <body>
     <style>
@@ -18,17 +27,14 @@
       padding-left: 6px;
       padding-right: 0px;
     }
-
     .right_sites {
       padding-left: 6px;
       padding-right: 0px;
     }
-
     .center_sites {
       padding-left: 6px;
       padding-right: 0px;
     }
-
     img {
       max-width: 99%;
       box-shadow: 0 0 .7em #999;
@@ -51,7 +57,6 @@
 
   <script type="text/javascript">
   function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],s=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(n){for(var o,t=0;t<s.length;t++)s[t].href&&s[t].href.indexOf(e)>-1&&(o=!0);o?n():setTimeout(function(){d.onloadcssdefined(n)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
-
   var isMobile = (function () {
     var check = false;
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -59,7 +64,6 @@
     }
     return check;
   }());
-
   $(function(){
     var baseUrl = 'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/latest/';
     var ajaxOptions = {
@@ -68,11 +72,9 @@
         data.left_sites.forEach(function(page){
           $('.left_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
         });
-
         data.right_sites.forEach(function(page){
           $('.right_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
         });
-
         data.center_sites.forEach(function(page){
           $('.center_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
         });
@@ -82,16 +84,13 @@
       }
     };
     $.ajax(ajaxOptions);
-
    if (isMobile) {
      loadCSS('https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css')
-
       var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal',
         loop: false
       });
    }
-
   });
   </script>
 
@@ -100,11 +99,8 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-372716-21', 'auto');
   ga('send', 'pageview');
-
 </script>
-
 </body>
 </html>
