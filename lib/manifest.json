@@ -83,7 +83,7 @@
     {
       "url":"https://news.vice.com",
       "image":"news.vice.com.jpg",
-      "options": {"customCSS":".ad__wrapper{display:none}", "renderDelay": 50}
+      "options": {"customCSS":".ad__wrapper{display:none}", "renderDelay": 500}
     },
     {
       "url":"http://www.latimes.com",
