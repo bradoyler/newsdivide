@@ -50,11 +50,6 @@
       "options": {"timeout": 65000, "customCSS":"iframe{display:none !important} .ad_container{display:none !important}"}
     },
     {
-      "url": "http://www.thegatewaypundit.com",
-      "image": "www.thegatewaypundit.com.jpg",
-      "options": {"customCSS": "iframe{display:none !important}"}
-    },
-    {
       "url":"http://www.infowars.com",
       "image":"www.infowars.com.jpg",
       "options": {"customCSS": "iframe{display:none !important}"}
