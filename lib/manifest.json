@@ -138,6 +138,10 @@
       "url":"http://www.slate.com",
       "image":"www.slate.com.jpg",
       "options": {"customCSS": ".ad{display:none !important;}"}
+    },
+    {
+      "url": "http://www.cnbc.com",
+      "image": "www.cnbc.com.jpg"
     }
   ]
 }
