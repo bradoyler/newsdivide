@@ -15,7 +15,8 @@
     },
     {
       "url": "http://mobile.reuters.com",
-      "image": "mobile.reuters.com.jpg"
+      "image": "mobile.reuters.com.jpg",
+      "options": {"customCSS":"iframe{display:none !important} div{background: rgba(0, 0, 0, 0) !important}"}
     },
     {
       "url":"http://www.nbcnews.com",
