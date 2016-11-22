@@ -11,26 +11,28 @@
     },
     {
       "url":"http://www.cnn.com",
-      "image":"www.cnn.com.jpg"
+      "image":"www.cnn.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url": "http://mobile.reuters.com",
       "image": "mobile.reuters.com.jpg",
-      "options": {"customCSS":"iframe{display:none !important} div{background: rgba(0, 0, 0, 0) !important}"}
+      "options": {"customCSS": "iframe{display:none !important} div{background: rgba(0, 0, 0, 0) !important}"}
     },
     {
       "url":"http://www.nbcnews.com",
       "image":"www.nbcnews.com.jpg",
-      "options": {"customCSS":".ad_wrapper{display:none}"}
+      "options": {"customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"}
     },
     {
       "url":"https://www.washingtonpost.com",
-      "image":"www.washingtonpost.com.jpg"
+      "image":"www.washingtonpost.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://www.wsj.com",
       "image":"www.wsj.com.jpg",
-      "options": {"renderDelay": 10}
+      "options": {"renderDelay": 10, "customCSS":"iframe{display:none !important}"}
     },
     {
       "url":"http://www.breitbart.com",
@@ -45,15 +47,17 @@
     {
       "url":"http://dailycaller.com",
       "image":"dailycaller.com.jpg",
-      "options": {"timeout": 72000, "customCSS":".ad_container{display:none;}"}
+      "options": {"timeout": 65000, "customCSS":"iframe{display:none !important} .ad_container{display:none !important}"}
     },
     {
       "url": "http://www.thegatewaypundit.com",
-      "image": "www.thegatewaypundit.com.jpg"
+      "image": "www.thegatewaypundit.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://www.infowars.com",
-      "image":"www.infowars.com.jpg"
+      "image":"www.infowars.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://idrudgereport.com",
@@ -75,11 +79,13 @@
     },
     {
       "url":"http://www.nbcnews.com/politics",
-      "image":"www.nbcnews.com_politics.jpg"
+      "image":"www.nbcnews.com_politics.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://www.cnn.com/politics",
-      "image":"www.cnn.com_politics.jpg"
+      "image":"www.cnn.com_politics.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://www.foxnews.com",
@@ -88,31 +94,33 @@
     },
     {
       "url":"http://www.nytimes.com",
-      "image":"www.nytimes.com.jpg"
+      "image":"www.nytimes.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"https://news.vice.com",
       "image":"news.vice.com.jpg",
-      "options": {"customCSS":".ad__wrapper{display:none}", "renderDelay": 500}
+      "options": {"customCSS": ".ad__wrapper{display:none}", "renderDelay": 500}
     },
     {
       "url":"http://www.latimes.com",
       "image":"www.latimes.com.jpg",
-      "options": {"customCSS":".trb_masthead_adBanner{display:none}"}
+      "options": {"customCSS": ".trb_masthead_adBanner{display:none}"}
     },
     {
       "url":"http://qz.com",
       "image":"qz.com.jpg",
-      "options": {"customCSS":"#marquee{display:none}"}
+      "options": {"customCSS": "#marquee{display:none} iframe{display:none !important}"}
     },
     {
       "url":"http://www.bloomberg.com",
-      "image":"www.bloomberg.com.jpg"
+      "image":"www.bloomberg.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://m.huffpost.com",
       "image":"m.huffpost.com.jpg",
-      "options": {"customCSS":".advertisement{display:none;} #adsDiv0{display:none;}"}
+      "options": {"customCSS": ".advertisement{display:none;} #adsDiv0{display:none;}"}
     },
     {
       "url":"https://newsblock.io",
@@ -120,15 +128,18 @@
     },
     {
       "url":"http://abcnews.go.com",
-      "image":"abcnews.go.com.jpg"
+      "image":"abcnews.go.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://www.cbsnews.com",
-      "image":"www.cbsnews.com.jpg"
+      "image":"www.cbsnews.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"https://newrepublic.com",
-      "image":"newrepublic.com.jpg"
+      "image":"newrepublic.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://m.motherjones.com/m",
@@ -142,11 +153,13 @@
     },
     {
       "url": "http://www.cnbc.com",
-      "image": "www.cnbc.com.jpg"
+      "image": "www.cnbc.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url": "http://www.theatlantic.com",
-      "image": "www.theatlantic.com.jpg"
+      "image": "www.theatlantic.com.jpg",
+      "options": {"customCSS": "iframe{display:none !important}"}
     }
   ]
 }
