@@ -142,6 +142,10 @@
     {
       "url": "http://www.cnbc.com",
       "image": "www.cnbc.com.jpg"
+    },
+    {
+      "url": "http://www.theatlantic.com",
+      "image": "www.theatlantic.com.jpg"
     }
   ]
 }
