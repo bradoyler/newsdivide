@@ -45,6 +45,16 @@
         <div class="title">RIGHT</div>
       </div>
     </div>
+    <div class="">
+      Archive
+    </div>
+    <ul>
+      <li><a href="?today">Today</a></li>
+      <li><a href="?archive=2016-11-20">2016-11-20</a></li>
+      <li><a href="?archive=2016-11-19">2016-11-19</a></li>
+      <li><a href="?archive=2016-11-18">2016-11-18</a></li>
+      <li><a href="?archive=2016-11-17">2016-11-17</a></li>
+    </ul>
   </div>
 
 <script type="text/javascript">
@@ -56,8 +66,18 @@
     return check;
  }());
 
+ var archiveDate = (function () {
+    var slug = 'latest';
+    var qry = document.location.search;
+    if (qry && qry.indexOf('?archive=') !== -1) {
+      // console.log('>> ', qry, qry.indexOf('?archive='));
+      slug = qry.split('=')[1];
+    }
+    return slug;
+ }());
+
  $(function(){
-  var baseUrl = 'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/latest/';
+  var baseUrl = 'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/'+ archiveDate +'/';
   var ajaxOptions = {
       url:'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/left-right.json',
       success: function (data) {
