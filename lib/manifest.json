@@ -11,11 +11,13 @@
     },
     {
       "url": "https://ijr.com",
-      "image": "ijr.com.jpg"
+      "image": "ijr.com.jpg",
+      "options": {"renderDelay": 5000}
     },
     {
       "url":"http://www.cnn.com",
       "image":"www.cnn.com.jpg",
+      "retryCount": 2,
       "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
