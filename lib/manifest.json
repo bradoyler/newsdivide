@@ -16,7 +16,7 @@
     },
     {
       "url": "http://nypost.com",
-      "image": "http://nypost.com.jpg",
+      "image": "nypost.com.jpg",
       "options": {"customCSS":".dfp-ad {display: none}"}
     },
     {
