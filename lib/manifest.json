@@ -10,6 +10,10 @@
       "image":"www.npr.org.jpg"
     },
     {
+      "url": "https://ijr.com",
+      "image": "ijr.com.jpg"
+    },
+    {
       "url":"http://www.cnn.com",
       "image":"www.cnn.com.jpg",
       "options": {"customCSS": "iframe{display:none !important}"}
