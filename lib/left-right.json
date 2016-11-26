@@ -43,16 +43,16 @@
       "image":"www.breitbart.com.jpg"
     },
     {
+      "url": "http://nypost.com",
+      "image": "http://nypost.com.jpg"
+    },
+    {
       "url":"http://www.theblaze.com",
       "image":"www.theblaze.com.jpg"
     },
     {
       "url":"http://dailycaller.com",
       "image":"dailycaller.com.jpg"
-    },
-    {
-      "url": "https://ijr.com",
-      "image": "ijr.com.jpg"
     },
     {
       "url":"http://www.infowars.com",
