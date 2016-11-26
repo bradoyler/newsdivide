@@ -3,7 +3,7 @@
     {
       "url": "https://www.apnews.com",
       "image": "www.apnews.com.jpg",
-      "options": {"renderDelay": 5000}
+      "options": {"renderDelay": 7000}
     },
     {
       "url":"http://www.npr.org",
