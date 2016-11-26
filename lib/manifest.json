@@ -10,11 +10,6 @@
       "image":"www.npr.org.jpg"
     },
     {
-      "url": "https://ijr.com",
-      "image": "ijr.com.jpg",
-      "options": {"renderDelay": 8000}
-    },
-    {
       "url": "http://nypost.com",
       "image": "nypost.com.jpg",
       "options": {"customCSS":".dfp-ad {display: none}"}
