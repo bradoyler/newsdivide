@@ -7,7 +7,7 @@ var manifest = require('../lib/test-manifest.json');
 //var debug = require('debug')('test');
 const cronScheduleB = '1 34 9-18 * * *';
 
-var options = {
+const options = {
   defaultWhiteBackground: true,
   errorIfStatusIsNot200: true,
   timeout: 65000,
@@ -22,4 +22,6 @@ capture.forEachWebShot(manifest.pages, options);
 
 var jobB = new CronJob(cronScheduleB, function () {
   console.log('>>> cron', new Date());
+
+  //capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');

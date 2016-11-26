@@ -12,20 +12,63 @@
 <body>
   <style>
     img {
+      max-height: 300px;
+      /*overflow-y: hidden;
       box-shadow: 0 0 15px #999;
-      margin: 1em
+      margin: 1em*/
     }
+
+    .thumbnail {
+      max-height: 200px;
+      overflow: hidden;
+    }
+    .caption {
+      font-size: .8em;
+    }
+
   </style>
-  <div class='container' id='images'></div>
+  <div class="container" id="images"></div>
 
   <script type="text/javascript">
   $(function(){
+
+    function ajaxImage (url, callback) {
+      var image;
+
+      $.ajax({
+        type: "GET",
+        url: url,
+        dataType: "image/jpg",
+        success: function(img) {
+          image = new Image();
+          image.src = img;
+          callback(image);
+        },
+        error: function(err) {
+          image = new Image();
+          image.src = 'http://website.site/image.png' // your error image
+          callback(image);
+        }
+      });
+    }
+
     var baseUrl = 'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/latest/';
     var ajaxOptions = {
       url:'http://s3.amazonaws.com/cdn.newsblock.io/newsmachine/manifest.json',
+      cache: false,
       success: function (data) {
         data.pages.forEach(function(page){
-          $('#images').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+          var tmpl = `
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <div class="caption">
+                    ${page.url}, lastMod: ??
+                  </div>
+                  <img class="img-thumbnail" src="${baseUrl}${page.image}" />
+                </div>
+              </div>
+          `;
+          $('#images').append(tmpl);
         });
       },
       error: function (resp, err, msg) {
