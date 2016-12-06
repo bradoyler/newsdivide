@@ -44,7 +44,7 @@
     {
       "url":"http://www.breitbart.com",
       "image":"www.breitbart.com.jpg",
-      "options": {"renderDelay": 65000, "customCSS":"#BBStoreLead{display:none;} header{height:0px} .S{display:none !important} "}
+      "options": {"renderDelay": 500, "customCSS":"#BBStoreLead{display:none;} header{height:0px} #isc_front_takeover_overlay{background:transparent;}"}
     },
     {
       "url":"http://www.theblaze.com",
