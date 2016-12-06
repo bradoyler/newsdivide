@@ -12,7 +12,7 @@
     {
       "url": "http://nypost.com",
       "image": "nypost.com.jpg",
-      "options": {"customCSS":".dfp-ad {display: none}"}
+      "options": {"renderDelay": 6000, "customCSS":".dfp-ad {display: none}"}
     },
     {
       "url":"http://www.cnn.com",
