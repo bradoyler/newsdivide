@@ -168,6 +168,12 @@
       "options": {"customCSS": ".ad{display:none !important;}"}
     },
     {
+      "url":"http://talkingpointsmemo.com",
+      "image":"talkingpointsmemo.com.jpg",
+      "retryCount": 5,
+      "options": {"customCSS": ".Header__MobileAdRow{display:none !important;}"}
+    },
+    {
       "url": "http://www.cnbc.com",
       "image": "www.cnbc.com.jpg",
       "options": {"customCSS": "iframe{display:none !important}"}

@@ -13,6 +13,10 @@
       "image": "www.theatlantic.com.jpg"
     },
     {
+      "url":"http://talkingpointsmemo.com",
+      "image":"talkingpointsmemo.com.jpg"
+    },
+    {
       "url":"http://www.slate.com",
       "image":"www.slate.com.jpg"
     },
@@ -23,10 +27,6 @@
     {
       "url":"http://www.motherjones.com",
       "image":"m.motherjones.com.jpg"
-    },
-    {
-      "url":"https://newrepublic.com",
-      "image":"newrepublic.com.jpg"
     }
   ],
   "right_sites": [
