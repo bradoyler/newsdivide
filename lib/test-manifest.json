@@ -1,10 +1,10 @@
 {
   "pages":[
     {
-      "url":"http://m.huffpost.com",
-      "image":"m.huffpost.com.jpg",
+      "url":"http://talkingpointsmemo.com",
+      "image":"talkingpointsmemo.com.jpg",
       "retryCount": 5,
-      "options": {"customCSS":".advertisement{display:none;} #adsDiv0{display:none;}"}
+      "options": {"customCSS": ".Header__MobileAdRow{display:none !important;}"}
     }
   ]
 }
