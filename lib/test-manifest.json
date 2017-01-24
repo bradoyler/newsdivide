@@ -1,10 +1,22 @@
 {
   "pages":[
     {
+      "url": "https://www.theatlantic.com",
+      "image": "www.theatlantic.com.jpg",
+      "options": {"renderDelay": 8500}
+    }
+  ],
+  "other":[
+    {
       "url":"http://talkingpointsmemo.com",
       "image":"talkingpointsmemo.com.jpg",
       "retryCount": 5,
       "options": {"customCSS": ".Header__MobileAdRow{display:none !important;}"}
+    },
+    {
+      "url": "http://bradoyler.github.io/newsdivide/",
+      "image": "newsdivide.jpg",
+      "options": {"customCSS": "body{padding-top: 30px;}", "screenSize": { "width": 1240, "height": 760 }, "renderDelay": 3000}
     }
   ]
 }

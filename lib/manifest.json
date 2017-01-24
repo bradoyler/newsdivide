@@ -179,9 +179,9 @@
       "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
-      "url": "http://www.theatlantic.com",
+      "url": "https://www.theatlantic.com",
       "image": "www.theatlantic.com.jpg",
-      "options": {"customCSS": "iframe{display:none !important}"}
+      "options": {"renderDelay": 3500}
     },
     {
       "url": "http://bradoyler.github.io/newsdivide/",
