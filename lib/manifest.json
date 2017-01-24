@@ -182,6 +182,11 @@
       "url": "http://www.theatlantic.com",
       "image": "www.theatlantic.com.jpg",
       "options": {"customCSS": "iframe{display:none !important}"}
+    },
+    {
+      "url": "http://bradoyler.github.io/newsdivide/",
+      "image": "newsdivide.jpg",
+      "options": {"screenSize": { "width": 1240, "height": 735 }}
     }
   ]
 }
