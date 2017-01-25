@@ -3,12 +3,14 @@ var dotenv = require('dotenv');
 dotenv.config({silent: true});
 var CronJob = require('cron').CronJob;
 var capture = require('./lib/capture');
+var dailyDivide = require('./test/dailydivide');
 var manifestCache = require('./lib/manifest.json');
 var manifest = JSON.parse(JSON.stringify(manifestCache));
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
 const cronScheduleA = '1 2 1,6 * * *';
 const cronScheduleB = '1 */20 9-18 * * *';
 const cronScheduleC = '1 2 20 * * *';
+// const cron5pmDaily = '1 05 17 * * *';
 
 const defaults = {
   defaultWhiteBackground: true,
@@ -28,6 +30,7 @@ var jobA = new CronJob(cronScheduleA, function () {
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
   capture.forEachWebShot(manifest.pages, options);
+  dailyDivide.compile();
 }, null, true, 'America/New_York');
 
 var jobB = new CronJob(cronScheduleB, function () {
@@ -43,6 +46,11 @@ var jobC = new CronJob(cronScheduleC, function () {
   manifest = JSON.parse(JSON.stringify(manifestCache));
   capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
+
+// var jobDaily = new CronJob(cron5pmDaily, function () {
+//   console.log('>>> cronDaily', new Date());
+//   dailyDivide.compile();
+// }, null, true, 'America/New_York');
 
 // first run...
 capture.forEachWebShot(manifest.pages, defaults);

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
+ <script src="https://code.jquery.com/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <meta name="description" content="Snapshots from the Reading Habits of Left, Right and Center">
+ <meta property="og:url" content="http://newsdivide.bradoyler.com/day/{{date-slug}}/"/>
+ <meta property="og:title" content="The News Divide: {{date-short}}"/>
+ <meta property="og:description" content="Snapshots from the Reading Habits of Left, Right and Center"/>
+ <meta property="og:image" content="http://newsdivide.bradoyler.com/day/{{date-slug}}/newsdivide.jpg"/>
+ <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@thenewsdivide"/>
+<meta name="twitter:title" content="The News Divide: {{date-short}}"/>
+<meta name="twitter:description" content="Snapshots from the Reading Habits of Left, Right and Center"/>
+<meta name="twitter:creator" content="@thenewsdivide"/>
+<meta name="twitter:domain" content="bradoyler.github.io"/>
+<meta name="twitter:image" content="http://newsdivide.bradoyler.com/day/{{date-slug}}/newsdivide.jpg"/>
+ <title>The News Divide: {{date-short}}</title>
+</head>
+<body data-baseurl="http://newsdivide.bradoyler.com/day/{{date-slug}}/" >
+ <style>
+  img {
+      max-width: 98%;
+      margin-left: 6px;
+      box-shadow: 0 0 .7em #999;
+      margin-top: 1em;
+  }
+  .title {
+    font-family: monospace;
+    font-size: 1.5em;
+  }
+  </style>
+  <div class='container swiper-container'>
+    <div class="row swiper-wrapper">
+      <div class="left_sites col-sm-4 col-xs-12 swiper-slide">
+        <div class="title">LEFT</div>
+      </div>
+      <div class="center_sites col-sm-4 col-xs-12 swiper-slide">
+        <div class="title">CENTER</div>
+      </div>
+      <div class="right_sites col-sm-4 col-xs-12 swiper-slide">
+        <div class="title">RIGHT</div>
+      </div>
+    </div>
+    <div class="">Archive</div>
+    <ul id="archive">
+      <li><a id='yesterday' href="/day/{{yesterday-slug}}">{{yesterday-short}}</a></li>
+    </ul>
+  </div>
+
+<script type="text/javascript">
+ var isMobile = (function () {
+    var check = false;
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      check = true;
+    }
+    return check;
+ }());
+ $(function(){
+  var baseUrl = $('body').data('baseurl');
+  var data = {{{sites}}};
+
+ data.left_sites.forEach(function(page){
+   $('.left_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+ });
+ data.center_sites.forEach(function(page){
+   $('.center_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+ });
+ data.right_sites.forEach(function(page){
+   $('.right_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+ });
+
+  var swipeEffect = isMobile ? 'coverflow' : 'slide';
+  var swiper = new Swiper('.swiper-container', {
+        effect: swipeEffect,
+        initialSlide: 1,
+        grabCursor: false,
+        centeredSlides: true,
+        slidesPerView: '3',
+        breakpoints: {
+            1024: { slidesPerView: 3, spaceBetween: 10},
+            768: { slidesPerView: 2, spaceBetween: 10},
+            420: { slidesPerView: 1, spaceBetween: 0},
+            320: { slidesPerView: 1, spaceBetween: 0}
+        },
+        coverflow: {
+            rotate: 10,
+            stretch: 0,
+            depth: 10,
+            modifier: 1,
+            slideShadows : false
+        }
+  });
+ });
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-372716-21', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
