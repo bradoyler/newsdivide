@@ -139,10 +139,6 @@
       "options": {"customCSS": ".advertisement{display:none;} #adsDiv0{display:none;}"}
     },
     {
-      "url":"https://newsblock.io",
-      "image":"newsblock.io.jpg"
-    },
-    {
       "url":"http://abcnews.go.com",
       "image":"abcnews.go.com.jpg",
       "options": {"customCSS": "iframe{display:none !important}"}
@@ -185,7 +181,7 @@
       "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
-      "url": "http://bradoyler.github.io/newsdivide/",
+      "url": "http://newsdivide.bradoyler.com",
       "image": "newsdivide.jpg",
       "options": {"screenSize": { "width": 1240, "height": 735 }, "windowSize": { "width": 1240, "height": 735 }}
     }
