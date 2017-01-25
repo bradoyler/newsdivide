@@ -21,6 +21,12 @@
       "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
+      "url": "http:/www.nydailynews.com",
+      "image": "www.nydailynews.com.jpg",
+      "retryCount": 2,
+      "options": {"renderDelay": 3400, "customCSS": "iframe{display:none !important}"}
+    },
+    {
       "url": "http://mobile.reuters.com",
       "image": "mobile.reuters.com.jpg",
       "retryCount": 5,
@@ -177,11 +183,6 @@
       "url": "http://www.cnbc.com",
       "image": "www.cnbc.com.jpg",
       "options": {"customCSS": "iframe{display:none !important}"}
-    },
-    {
-      "url": "https://www.theatlantic.com",
-      "image": "www.theatlantic.com.jpg",
-      "options": {"renderDelay": 3500}
     },
     {
       "url": "http://bradoyler.github.io/newsdivide/",

@@ -12,3 +12,8 @@
   "url": "http://time.com",
   "image": "time.com.jpg"
 },
+{
+  "url": "https://www.theatlantic.com",
+  "image": "www.theatlantic.com.jpg",
+  "options": {"renderDelay": 3500}
+},
