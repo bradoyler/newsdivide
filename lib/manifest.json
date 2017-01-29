@@ -21,7 +21,7 @@
       "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
-      "url": "http:/www.nydailynews.com",
+      "url": "http://www.nydailynews.com",
       "image": "www.nydailynews.com.jpg",
       "retryCount": 2,
       "options": {"renderDelay": 3400, "customCSS": "iframe{display:none !important}"}

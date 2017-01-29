@@ -3,7 +3,7 @@ var dotenv = require('dotenv');
 dotenv.config({silent: true});
 var CronJob = require('cron').CronJob;
 var capture = require('./lib/capture');
-var dailyDivide = require('./test/dailydivide');
+const html = require('../lib/generateHtml');
 var manifestCache = require('./lib/manifest.json');
 var manifest = JSON.parse(JSON.stringify(manifestCache));
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
@@ -24,13 +24,14 @@ const defaults = {
 };
 
 console.log('starting...');
+html.compile();
 
 var jobA = new CronJob(cronScheduleA, function () {
   console.log('>>> cronA', new Date());
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
   capture.forEachWebShot(manifest.pages, options);
-  dailyDivide.compile(false);
+  html.compile();
 }, null, true, 'America/New_York');
 
 var jobB = new CronJob(cronScheduleB, function () {
