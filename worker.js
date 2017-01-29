@@ -18,7 +18,7 @@ const defaults = {
   timeout: 65000,
   quality: 95,
   streamType: 'jpg',
-  renderDelay: 1800,
+  renderDelay: 2800,
   screenSize: { width: 375, height: 667 },
   userAgent: userAgent
 };
