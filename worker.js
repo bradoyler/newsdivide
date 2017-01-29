@@ -3,7 +3,7 @@ var dotenv = require('dotenv');
 dotenv.config({silent: true});
 var CronJob = require('cron').CronJob;
 var capture = require('./lib/capture');
-const html = require('../lib/generateHtml');
+const html = require('./lib/generateHtml');
 var manifestCache = require('./lib/manifest.json');
 var manifest = JSON.parse(JSON.stringify(manifestCache));
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
