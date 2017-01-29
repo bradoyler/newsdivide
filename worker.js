@@ -8,7 +8,7 @@ var manifestCache = require('./lib/manifest.json');
 var manifest = JSON.parse(JSON.stringify(manifestCache));
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
 const cronScheduleA = '1 2 1,6 * * *';
-const cronScheduleB = '1 */20 9-18 * * *';
+const cronScheduleB = '1 */15 9-18 * * *';
 const cronScheduleC = '1 2 20 * * *';
 // const cron5pmDaily = '1 05 17 * * *';
 
@@ -27,7 +27,7 @@ console.log('starting...');
 html.compile();
 
 var jobA = new CronJob(cronScheduleA, function () {
-  console.log('>>> cronA', new Date());
+  console.log('>>> cron A:', cronScheduleA, new Date());
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
   capture.forEachWebShot(manifest.pages, options);
@@ -35,14 +35,14 @@ var jobA = new CronJob(cronScheduleA, function () {
 }, null, true, 'America/New_York');
 
 var jobB = new CronJob(cronScheduleB, function () {
-  console.log('>>> cronB', new Date());
+  console.log('>>> cron B:', cronScheduleB, new Date());
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
   capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
 
 var jobC = new CronJob(cronScheduleC, function () {
-  console.log('>>> cronC', new Date());
+  console.log('>>> cron C:', cronScheduleC, new Date());
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
   capture.forEachWebShot(manifest.pages, options);
@@ -53,5 +53,5 @@ var jobC = new CronJob(cronScheduleC, function () {
 //   dailyDivide.compile();
 // }, null, true, 'America/New_York');
 
-// first run...
+// startup run...
 capture.forEachWebShot(manifest.pages, defaults);
