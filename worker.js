@@ -30,7 +30,7 @@ var jobA = new CronJob(cronScheduleA, function () {
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
   capture.forEachWebShot(manifest.pages, options);
-  dailyDivide.compile();
+  dailyDivide.compile(false);
 }, null, true, 'America/New_York');
 
 var jobB = new CronJob(cronScheduleB, function () {
