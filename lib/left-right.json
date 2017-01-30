@@ -35,6 +35,10 @@
       "image":"www.foxnews.com.jpg"
     },
     {
+      "url": "http://www.nationalreview.com",
+      "image": "www.nationalreview.com.jpg"
+    },
+    {
       "url":"http://idrudgereport.com",
       "image":"idrudgereport.com.jpg"
     },
@@ -53,10 +57,6 @@
     {
       "url":"http://dailycaller.com",
       "image":"dailycaller.com.jpg"
-    },
-    {
-      "url":"http://www.infowars.com",
-      "image":"www.infowars.com.jpg"
     }
   ],
   "center_sites": [

@@ -1,0 +1,34 @@
+{
+  "url": "https://ijr.com",
+  "image": "ijr.com.jpg",
+  "options": {"renderDelay": 8000}
+},
+{
+  "url": "http://www.thegatewaypundit.com",
+  "image": "www.thegatewaypundit.com.jpg",
+  "options": {"customCSS": "iframe{display:none !important}"}
+},
+{
+  "url": "http://time.com",
+  "image": "time.com.jpg"
+},
+{
+  "url": "https://www.theatlantic.com",
+  "image": "www.theatlantic.com.jpg",
+  "options": {"renderDelay": 3500}
+},
+{
+  "url":"http://www.infowars.com",
+  "image":"www.infowars.com.jpg",
+  "options": {"customCSS": "iframe{display:none !important}"}
+},
+{
+  "url":"http://www.nbcnews.com/politics",
+  "image":"www.nbcnews.com_politics.jpg",
+  "options": {"customCSS": "iframe{display:none !important}"}
+},
+{
+  "url":"http://www.cnn.com/politics",
+  "image":"www.cnn.com_politics.jpg",
+  "options": {"customCSS": "iframe{display:none !important}"}
+},

@@ -64,11 +64,6 @@
       "options": {"timeout": 65000, "customCSS":"iframe{display:none !important} .ad_container{display:none !important}"}
     },
     {
-      "url":"http://www.infowars.com",
-      "image":"www.infowars.com.jpg",
-      "options": {"customCSS": "iframe{display:none !important}"}
-    },
-    {
       "url":"http://idrudgereport.com",
       "image":"idrudgereport.com.jpg",
       "options": {"shotOffset": { "left": 0, "right": 0, "top": 280, "bottom": 0 }}
@@ -85,16 +80,6 @@
       "url": "http://www.msnbc.com",
       "image": "www.msnbc.com.jpg",
       "options":{"customCSS":".advert--pencil{display:none}"}
-    },
-    {
-      "url":"http://www.nbcnews.com/politics",
-      "image":"www.nbcnews.com_politics.jpg",
-      "options": {"customCSS": "iframe{display:none !important}"}
-    },
-    {
-      "url":"http://www.cnn.com/politics",
-      "image":"www.cnn.com_politics.jpg",
-      "options": {"customCSS": "iframe{display:none !important}"}
     },
     {
       "url":"http://www.foxnews.com",
@@ -179,6 +164,10 @@
       "url": "http://www.cnbc.com",
       "image": "www.cnbc.com.jpg",
       "options": {"customCSS": "iframe{display:none !important}"}
+    },
+    {
+      "url": "http://www.nationalreview.com",
+      "image": "www.nationalreview.com.jpg"
     },
     {
       "url": "http://newsdivide.bradoyler.com",
