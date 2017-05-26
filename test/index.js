@@ -1,15 +1,16 @@
 /* eslint-disable no-unused-vars */
-var dotenv = require('dotenv');
+const dotenv = require('dotenv');
 dotenv.config({silent: true});
-var CronJob = require('cron').CronJob;
-var capture = require('../lib/capture');
-var manifest = require('../lib/test-manifest.json');
-//var debug = require('debug')('test');
+const CronJob = require('cron').CronJob;
+const capture = require('../lib/capture');
+const manifest = require('../lib/test-manifest.json');
+const debug = require('debug')('test');
 const cronScheduleB = '1 34 9-18 * * *';
 
 const options = {
   defaultWhiteBackground: true,
   errorIfStatusIsNot200: true,
+  errorIfJSException: false,
   timeout: 65000,
   quality: 95,
   streamType: 'jpg',
@@ -18,10 +19,10 @@ const options = {
   userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
 };
 
+debug('defaults ~', options);
 capture.forEachWebShot(manifest.pages, options);
 
-var jobB = new CronJob(cronScheduleB, function () {
-  console.log('>>> cron', new Date());
-
-  //capture.forEachWebShot(manifest.pages, options);
+const jobB = new CronJob(cronScheduleB, function () {
+  debug('>>> cron', new Date());
+  // capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');

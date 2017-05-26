@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "standard --verbose && node test",
-    "format": "standard --fix"
+    "test": "eslint . && node test",
+    "format": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -20,10 +20,14 @@
     "moment": "2.16.0",
     "moment-timezone": "0.5.9",
     "phantomjs-prebuilt": "2.1.13",
-    "standard": "8.5.0",
     "webshot": "0.18.0"
   },
-  "standard": {
-    "ignore": []
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-semistandard": "11.0.0",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-node": "4.2.2",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-react": "7.0.1"
   }
 }
