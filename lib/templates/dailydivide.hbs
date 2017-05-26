@@ -25,12 +25,14 @@
 </head>
 <body>
 <style>
-  img {
-      max-width: 375px;
-      margin-left: 6px;
-      box-shadow: 0 0 .7em #999;
-      margin-top: 1em;
+  .image {
+    max-height: 660px;
+    max-width: 98%;
+    margin-left: 6px;
+    box-shadow: 0 0 .7em #999;
+    margin-top: 1em;
   }
+
   .title {
     font-family: monospace;
     font-size: 1.5em;
@@ -73,13 +75,13 @@
    var minOfDay = hour + '_' + min;
 
    data.left_sites.forEach(function(page){
-     $('.left_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
+     $('.left_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
    data.center_sites.forEach(function(page){
-     $('.center_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
+     $('.center_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
    data.right_sites.forEach(function(page){
-     $('.right_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
+     $('.right_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
 
    var swipeEffect = isMobile ? 'coverflow' : 'slide';
