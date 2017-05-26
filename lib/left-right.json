@@ -1,5 +1,5 @@
 {
-  "left_sites":[
+  "left_sites": [
     {
       "url": "http://m.huffpost.com",
       "image": "m.huffpost.com.jpg"
@@ -13,68 +13,68 @@
       "image": "www.nydailynews.com.jpg"
     },
     {
-      "url":"http://talkingpointsmemo.com",
-      "image":"talkingpointsmemo.com.jpg"
+      "url": "http://talkingpointsmemo.com",
+      "image": "talkingpointsmemo.com.jpg"
     },
     {
-      "url":"http://www.slate.com",
-      "image":"www.slate.com.jpg"
+      "url": "http://www.slate.com",
+      "image": "www.slate.com.jpg"
     },
     {
-      "url":"https://news.vice.com",
-      "image":"news.vice.com.jpg"
+      "url": "https://news.vice.com",
+      "image": "news.vice.com.jpg"
     },
     {
-      "url":"http://www.motherjones.com",
-      "image":"m.motherjones.com.jpg"
+      "url": "http://www.motherjones.com",
+      "image": "m.motherjones.com.jpg"
     }
   ],
   "right_sites": [
     {
-      "url":"http://www.foxnews.com",
-      "image":"www.foxnews.com.jpg"
+      "url": "http://www.foxnews.com",
+      "image": "www.foxnews.com.jpg"
     },
     {
-      "url": "http://www.nationalreview.com",
-      "image": "www.nationalreview.com.jpg"
+      "url": "http://www.redstate.com",
+      "image": "www.redstate.com.jpg"
     },
     {
-      "url":"http://idrudgereport.com",
-      "image":"idrudgereport.com.jpg"
+      "url": "http://idrudgereport.com",
+      "image": "idrudgereport.com.jpg"
     },
     {
-      "url":"http://www.breitbart.com",
-      "image":"www.breitbart.com.jpg"
+      "url": "http://www.breitbart.com",
+      "image": "www.breitbart.com.jpg"
     },
     {
       "url": "http://nypost.com",
       "image": "nypost.com.jpg"
     },
     {
-      "url":"http://www.theblaze.com",
-      "image":"www.theblaze.com.jpg"
+      "url": "http://www.theblaze.com",
+      "image": "www.theblaze.com.jpg"
     },
     {
-      "url":"http://dailycaller.com",
-      "image":"dailycaller.com.jpg"
+      "url": "http://dailycaller.com",
+      "image": "dailycaller.com.jpg"
     }
   ],
   "center_sites": [
     {
-      "url":"http://www.nbcnews.com",
-      "image":"www.nbcnews.com.jpg"
+      "url": "http://www.nbcnews.com",
+      "image": "www.nbcnews.com.jpg"
     },
     {
-      "url":"http://www.cnn.com",
-      "image":"www.cnn.com.jpg"
+      "url": "http://www.cnn.com",
+      "image": "www.cnn.com.jpg"
     },
     {
-      "url":"https://www.washingtonpost.com",
-      "image":"www.washingtonpost.com.jpg"
+      "url": "https://www.washingtonpost.com",
+      "image": "www.washingtonpost.com.jpg"
     },
     {
-      "url":"http://www.nytimes.com",
-      "image":"www.nytimes.com.jpg"
+      "url": "http://www.nytimes.com",
+      "image": "www.nytimes.com.jpg"
     },
     {
       "url": "https://www.apnews.com",
