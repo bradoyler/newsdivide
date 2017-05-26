@@ -67,15 +67,19 @@
  }());
  $(function(){
    var data = {{{sites}}};
+   var jsDate = new Date();
+   var hour = new Date().getHours();
+   var min = Math.round(jsDate.getMinutes() / 9);
+   var minOfDay = hour + '_' + min;
 
    data.left_sites.forEach(function(page){
-     $('.left_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+     $('.left_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
    data.center_sites.forEach(function(page){
-     $('.center_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+     $('.center_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
    data.right_sites.forEach(function(page){
-     $('.right_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'" /></a>');
+     $('.right_sites').append('<a href="'+page.url+'" target="blank"><img src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
 
    var swipeEffect = isMobile ? 'coverflow' : 'slide';

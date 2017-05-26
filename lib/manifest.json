@@ -176,8 +176,8 @@
       "options": {
         "customCSS": ".advertisement{display:none;} #adsDiv0{display:none;}",
         "shotSize": {
-          "width": 740,
-          "height": 1316
+          "width": 690,
+          "height": 1227
         }
       }
     },
