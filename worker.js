@@ -6,7 +6,8 @@ const capture = require('./lib/capture');
 const html = require('./lib/generateHtml');
 const manifestCache = require('./lib/manifest.json');
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
-const cronScheduleA = '1 2 1,6 * * *';
+const cronScheduleA = '1 2 1,5 * * *';
+const cronScheduleA2 = '1 2 6,7,8 * * *';
 const cronScheduleB = '1 */15 9-18 * * *';
 const cronScheduleC = '1 2 20 * * *';
 // const cron5pmDaily = '1 05 17 * * *';
@@ -32,6 +33,13 @@ const jobA = new CronJob(cronScheduleA, function () {
   manifest = JSON.parse(JSON.stringify(manifestCache));
   capture.forEachWebShot(manifest.pages, options);
   html.compile();
+}, null, true, 'America/New_York');
+
+const jobA2 = new CronJob(cronScheduleA2, function () {
+  console.log('>>> cron A2:', cronScheduleB, new Date());
+  var options = defaults;
+  manifest = JSON.parse(JSON.stringify(manifestCache));
+  capture.forEachWebShot(manifest.pages, options);
 }, null, true, 'America/New_York');
 
 const jobB = new CronJob(cronScheduleB, function () {
