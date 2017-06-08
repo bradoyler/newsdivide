@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://newsdivide.bradoyler.com/day/{{date-slug}}/newsdivide.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@nbcnews"/>
-<meta name="twitter:title" content="The News Divide: {{date-short}}"/>
+<meta name="twitter:title" content="NBCNews.com: {{date-short}}"/>
 <meta name="twitter:description" content="Snapshots from NBCNews.com"/>
 <meta name="twitter:creator" content="@thenewsdivide"/>
 <meta name="twitter:domain" content="bradoyler.github.io"/>
@@ -33,6 +33,14 @@
     margin-top: 1em;
   }
 
+  .imageDesktop {
+    max-height: 820px;
+    max-width: 98%;
+    margin-left: 6px;
+    box-shadow: 0 0 .7em #999;
+    margin-top: 1em;
+  }
+
   .title {
     font-family: monospace;
     font-size: 1.5em;
@@ -43,7 +51,7 @@
     <div class="mobile_sites col-sm-4 col-xs-12 swiper-slide">
       <div class="title">Mobile</div>
     </div>
-    <div class="desktop_sites col-sm-4 col-xs-12 swiper-slide">
+    <div class="desktop_sites col-sm-8 col-xs-12 swiper-slide">
       <div class="title">Desktop</div>
     </div>
   </div>
@@ -75,7 +83,7 @@
      $('.mobile_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
    data.desktop.forEach(function(page){
-     $('.desktop_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
+     $('.desktop_sites').append('<a href="'+page.url+'" target="blank"><img class="imageDesktop" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
 
    var swipeEffect = isMobile ? 'coverflow' : 'slide';
@@ -83,10 +91,10 @@
           effect: swipeEffect,
           initialSlide: 1,
           grabCursor: false,
-          centeredSlides: true,
-          slidesPerView: '3',
+          centeredSlides: false,
+          slidesPerView: 2,
           breakpoints: {
-              1024: { slidesPerView: 3, spaceBetween: 10},
+              1024: { slidesPerView: 2, spaceBetween: 10},
               768: { slidesPerView: 2, spaceBetween: 10},
               420: { slidesPerView: 1, spaceBetween: 0},
               320: { slidesPerView: 1, spaceBetween: 0}

@@ -62,8 +62,7 @@
         "windowSize": {
           "width": 800,
           "height": 600
-        },
-        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
+        }
       }
     },
     {
@@ -77,8 +76,7 @@
         "windowSize": {
           "width": 800,
           "height": 600
-        },
-        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
+        }
       }
     },
     {
@@ -92,23 +90,16 @@
         "windowSize": {
           "width": 800,
           "height": 600
-        },
-        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
+        }
       }
     },
     {
       "url": "https://www.nbcnews.com/mach",
-      "image": "www.nbcnews.com_mach.jpg",
-      "options": {
-        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
-      }
+      "image": "www.nbcnews.com_mach.jpg"
     },
     {
       "url": "https://www.nbcnews.com/better",
-      "image": "www.nbcnews.com_better.jpg",
-      "options": {
-        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
-      }
+      "image": "www.nbcnews.com_better.jpg"
     },
     {
       "url": "https://www.washingtonpost.com",
