@@ -1,0 +1,30 @@
+{
+  "mobile": [
+    {
+      "url": "http://www.nbcnews.com",
+      "image": "www.nbcnews.com.jpg"
+    },
+    {
+      "url": "http://www.nbcnews.com/mach",
+      "image": "www.nbcnews.com_mach.jpg"
+    },
+    {
+      "url": "http://www.nbcnews.com/better",
+      "image": "www.nbcnews.com_better.jpg"
+    }
+  ],
+  "desktop": [
+    {
+      "url": "http://www.nbcnews.com",
+      "image": "www.nbcnews.com_DESKTOP.jpg"
+    },
+    {
+      "url": "http://www.nbcnews.com/mach",
+      "image": "www.nbcnews.com_mach_DESKTOP.jpg"
+    },
+    {
+      "url": "http://www.nbcnews.com/better",
+      "image": "www.nbcnews.com_better_DESKTOP.jpg"
+    }
+  ]
+}

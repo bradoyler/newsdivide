@@ -52,6 +52,53 @@
       }
     },
     {
+      "url": "http://www.nbcnews.com",
+      "image": "www.nbcnews.com_DESKTOP.jpg",
+      "options": {
+        "shotSize": {
+          "width": 800,
+          "height": 600
+        },
+        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
+      }
+    },
+    {
+      "url": "http://www.nbcnews.com/mach",
+      "image": "www.nbcnews.com_mach_DESKTOP.jpg",
+      "options": {
+        "shotSize": {
+          "width": 800,
+          "height": 600
+        },
+        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
+      }
+    },
+    {
+      "url": "http://www.nbcnews.com/better",
+      "image": "www.nbcnews.com_better_DESKTOP.jpg",
+      "options": {
+        "shotSize": {
+          "width": 800,
+          "height": 600
+        },
+        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
+      }
+    },
+    {
+      "url": "http://www.nbcnews.com/mach",
+      "image": "www.nbcnews.com_mach.jpg",
+      "options": {
+        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
+      }
+    },
+    {
+      "url": "http://www.nbcnews.com/better",
+      "image": "www.nbcnews.com_better.jpg",
+      "options": {
+        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
+      }
+    },
+    {
       "url": "https://www.washingtonpost.com",
       "image": "www.washingtonpost.com.jpg",
       "options": {
