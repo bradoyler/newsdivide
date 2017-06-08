@@ -67,7 +67,7 @@
       }
     },
     {
-      "url": "http://www.nbcnews.com/mach",
+      "url": "https://www.nbcnews.com/mach",
       "image": "www.nbcnews.com_mach_DESKTOP.jpg",
       "options": {
         "shotSize": {
@@ -82,7 +82,7 @@
       }
     },
     {
-      "url": "http://www.nbcnews.com/better",
+      "url": "https://www.nbcnews.com/better",
       "image": "www.nbcnews.com_better_DESKTOP.jpg",
       "options": {
         "shotSize": {
@@ -97,14 +97,14 @@
       }
     },
     {
-      "url": "http://www.nbcnews.com/mach",
+      "url": "https://www.nbcnews.com/mach",
       "image": "www.nbcnews.com_mach.jpg",
       "options": {
         "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
       }
     },
     {
-      "url": "http://www.nbcnews.com/better",
+      "url": "https://www.nbcnews.com/better",
       "image": "www.nbcnews.com_better.jpg",
       "options": {
         "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
