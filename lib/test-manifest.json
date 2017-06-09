@@ -1,20 +1,63 @@
 {
   "pages": [
     {
-      "url": "http://www.redstate.com",
-      "image": "www.redstate.com.jpg"
+      "url": "http://www.nbcnews.com",
+      "image": "www.nbcnews.com_DESKTOP.jpg",
+      "options": {
+        "shotSize": {
+          "width": "all",
+          "height": "window"
+        },
+        "windowSize": {
+          "width": 1080,
+          "height": 1320
+        }
+      }
+    },
+    {
+      "url": "https://www.nbcnews.com/mach",
+      "image": "www.nbcnews.com!mach_DESKTOP.jpg",
+      "options": {
+        "shotSize": {
+          "width": "all",
+          "height": "window"
+        },
+        "windowSize": {
+          "width": 1080,
+          "height": 1320
+        }
+      }
+    },
+    {
+      "url": "https://www.nbcnews.com/better",
+      "image": "www.nbcnews.com!better_DESKTOP.jpg",
+      "options": {
+        "shotSize": {
+          "width": "all",
+          "height": "window"
+        },
+        "windowSize": {
+          "width": 1080,
+          "height": 1320
+        }
+      }
     }
   ],
   "other": [
     {
+      "url": "http://www.redstate.com",
+      "image": "www.redstate.com.jpg"
+    },
+    {
       "url": "http://m.huffpost.com",
-      "image": "m.huffpost.com.jpg",
+      "image": "test.huffpost.com.jpg",
       "retryCount": 2,
       "options": {
         "shotSize": {
           "width": 700,
           "height": 1245
         },
+        "zoomFactor": 0.5,
         "customCSS": ".advertisement{display:none;} #adsDiv0{display:none;}"
       }
     },

@@ -5,6 +5,7 @@
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
 <meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://nodeassets.nbcnews.com/31533d28.favicon.ico"/>
 <meta name="viewport" content="width=device-width">
 <meta name="description" content="Snapshots from NBCNews.com">
 <meta property="og:url" content="https://newsdivide.bradoyler.com/day/{{date-slug}}/"/>
@@ -27,14 +28,6 @@
 <style>
   .image {
     max-height: 660px;
-    max-width: 98%;
-    margin-left: 6px;
-    box-shadow: 0 0 .7em #999;
-    margin-top: 1em;
-  }
-
-  .imageDesktop {
-    max-height: 820px;
     max-width: 98%;
     margin-left: 6px;
     box-shadow: 0 0 .7em #999;
@@ -83,7 +76,7 @@
      $('.mobile_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
    data.desktop.forEach(function(page){
-     $('.desktop_sites').append('<a href="'+page.url+'" target="blank"><img class="imageDesktop" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
+     $('.desktop_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
    });
 
    var swipeEffect = isMobile ? 'coverflow' : 'slide';
