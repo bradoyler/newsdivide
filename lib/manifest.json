@@ -120,7 +120,9 @@
       "url": "http://www.breitbart.com",
       "image": "www.breitbart.com.jpg",
       "options": {
-        "javascriptEnabled": false,
+        "settings": {
+          "javascriptEnabled": false
+        },
         "renderDelay": 500,
         "customCSS": "#BBStoreLead{display:none;} header{height:0px} #isc_front_takeover_overlay{background:transparent;}"
       }
