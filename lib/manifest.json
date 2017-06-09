@@ -257,8 +257,8 @@
       }
     },
     {
-      "url": "http://m.motherjones.com/m",
-      "image": "m.motherjones.com.jpg",
+      "url": "http://www.motherjones.com",
+      "image": "www.motherjones.com.jpg",
       "retryCount": 5,
       "options": {
         "timeout": 71000,
