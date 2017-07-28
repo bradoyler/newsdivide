@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && node test",
-    "format": "eslint . --fix"
+    "test": "semistandard && node test",
+    "format": "semistandard --fix"
   },
   "keywords": [],
   "author": "",
@@ -23,11 +23,6 @@
     "webshot": "0.18.0"
   },
   "devDependencies": {
-    "eslint": "3.19.0",
-    "eslint-config-semistandard": "11.0.0",
-    "eslint-plugin-import": "2.3.0",
-    "eslint-plugin-node": "4.2.2",
-    "eslint-plugin-promise": "3.5.0",
-    "eslint-plugin-react": "7.0.1"
+    "semistandard": "^11.0.0"
   }
 }
