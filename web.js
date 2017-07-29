@@ -10,9 +10,10 @@ app.post('/webshot/:url', function (req, res) {
   const body = req.body.Body;
   res.json({
     msg: 'send this data',
-    body
+    body: body
   });
 });
+
 app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'), function (err) {
