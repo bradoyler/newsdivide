@@ -22,8 +22,9 @@ app.post('/webshot/:url', function (req, res) {
   const page = req.body;
 
   console.log('## Start webshot', page);
-  const options = Object.assign({}, defaults, page.options);
+  const options = Object.assign({}, defaults, page);
   const renderStream = webshot(page.url, options);
+  const streamErrors = [];
 
   let buffers = [];
   renderStream.on('data', function (data) {
@@ -33,14 +34,14 @@ app.post('/webshot/:url', function (req, res) {
 
   renderStream.on('error', function (err) {
     buffers = null;
-    res.status(500).send({ error: `Capture error: ${page.url} ${err}` });
-    console.error({ error: `Capture error: ${page.url} ${err}` });
+    streamErrors.push(`Capture error: ${err}, options: ${JSON.stringify(options)}`);
   });
 
   renderStream.on('end', function (data) {
     if (!buffers) {
-      res.status(500).send({ error: 'Error, no buffer' });
-      console.error({ error: 'Error, no buffer' });
+      streamErrors.push('Error, no buffer');
+      res.status(500).send(streamErrors);
+      console.error(streamErrors);
       return;
     }
 
@@ -49,19 +50,21 @@ app.post('/webshot/:url', function (req, res) {
     try {
       dimensions = sizeOf(buffer);
     } catch (ex) {
-      res.status(500).send({ error: `Error caught: ${page.url} ${ex}` });
-      console.error({ error: `Error caught: ${page.url} ${ex}` });
+      streamErrors.push(`Error caught: ${page.url} ${ex}`);
+      res.status(500).send(streamErrors);
+      console.error(streamErrors);
       return;
     }
 
     if (!dimensions || dimensions.width < 300) {
-      res.status(500).send({ error: 'insufficient dimensions' });
-      console.error({ error: 'insufficient dimensions' });
+      streamErrors.push('insufficient dimensions');
+      res.status(500).send(streamErrors);
+      console.error(streamErrors);
       return;
     }
 
     res.type('jpeg');
-    console.log('Done webshot', page, options, 'size:', buffer.length);
+    console.log('Done webshot', page, 'options:', options, 'size:', buffer.length);
     res.send(buffer);
   });
 });
