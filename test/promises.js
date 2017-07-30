@@ -1,16 +1,16 @@
 const req = require('request');
-// const pages = require('../lib/manifest.json').pages;
+const sites = require('../lib/manifest.json').pages;
 
-const sites = [
-  {
-    url: 'http://nbcnews.com',
-    test: '1'
-  },
-  {
-    url: 'http://xxxxnypost.com',
-    test: '2'
-  }
-];
+// const sites = [
+//   {
+//     url: 'http://nbcnews.com',
+//     test: '1'
+//   },
+//   {
+//     url: 'http://xxxxnypost.com',
+//     test: '2'
+//   }
+// ];
 
 function post (url, options) {
   return new Promise((resolve) => {
