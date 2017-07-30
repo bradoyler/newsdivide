@@ -2,7 +2,8 @@
 const dotenv = require('dotenv');
 dotenv.config({silent: true});
 const CronJob = require('cron').CronJob;
-const capture = require('../lib/capture');
+// const capture = require('../lib/capture');
+const captureQueue = require('../lib/captureQueue');
 const testManifest = require('../lib/test-manifest.json');
 const debug = require('debug')('test');
 const cronScheduleB = '1 34 9-18 * * *';
@@ -23,7 +24,7 @@ const options = {
 };
 
 // debug('defaults ~', options);
-capture.forEachWebShot(testManifest.pages, options);
+captureQueue.batch(testManifest.pages, options);
 
 const jobB = new CronJob(cronScheduleB, function () {
   debug('>>> cron', new Date());

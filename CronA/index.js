@@ -1,6 +1,6 @@
 const html = require('../lib/generateHtml');
 const manifestCache = require('../lib/manifest.json');
-const capture = require('../lib/capture');
+const capture = require('../lib/captureQueue');
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
 
 const defaults = {
@@ -20,7 +20,7 @@ module.exports = function (context, myTimer) {
   context.log('>>> cron A:');
   const timeStamp = new Date().toISOString();
   manifest = JSON.parse(JSON.stringify(manifestCache));
-  capture.forEachWebShot(manifest.pages, defaults, function () {
+  capture.batch(manifest.pages, defaults, function () {
     context.log('TimeTrigger2 function ran!', timeStamp);
     context.done();
   });
