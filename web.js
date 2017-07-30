@@ -1,6 +1,7 @@
 const webshot = require('webshot');
 const sizeOf = require('image-size');
 const express = require('express');
+const queue = require('express-queue');
 const bodyParser = require('body-parser');
 const app = express();
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
@@ -17,6 +18,7 @@ const defaults = {
 };
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(queue({ activeLimit: 2 }));
 
 app.post('/webshot/:url', function (req, res) {
   const page = req.body;
