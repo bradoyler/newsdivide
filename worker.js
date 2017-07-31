@@ -13,6 +13,7 @@ const cronScheduleC = '1 2 20 * * *';
 let manifest = JSON.parse(JSON.stringify(manifestCache));
 
 const defaults = {
+  bucket: 'newsdivide.bradoyler.com',
   defaultWhiteBackground: true,
   errorIfStatusIsNot200: true,
   timeout: 65000,
@@ -30,7 +31,7 @@ const jobA = new CronJob(cronScheduleA, function () {
   console.log('>>> cron A:', cronScheduleA, new Date());
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
-  capture.batch(manifest.pages, options);
+  capture.queue(manifest.pages, options);
   html.compile();
 }, null, true, 'America/New_York');
 
@@ -38,14 +39,14 @@ const jobB = new CronJob(cronScheduleB, function () {
   console.log('>>> cron B:', cronScheduleB, new Date());
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
-  capture.batch(manifest.pages, options);
+  capture.queue(manifest.pages, options);
 }, null, true, 'America/New_York');
 
 const jobC = new CronJob(cronScheduleC, function () {
   console.log('>>> cron C:', cronScheduleC, new Date());
   var options = defaults;
   manifest = JSON.parse(JSON.stringify(manifestCache));
-  capture.batch(manifest.pages, options);
+  capture.queue(manifest.pages, options);
 }, null, true, 'America/New_York');
 
 // const jobDaily = new CronJob(cron5pmDaily, function () {
