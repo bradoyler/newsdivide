@@ -55,4 +55,4 @@ const jobC = new CronJob(cronScheduleC, function () {
 // }, null, true, 'America/New_York');
 
 // startup run...
-capture.batch(manifest.pages, defaults);
+capture.queue(manifest.pages, defaults);
