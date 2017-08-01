@@ -1,4 +1,16 @@
 {
+  "apps": [
+    {
+      "templatePath": "./templates/dailydivide.hbs",
+      "jsonFilePath": "../lib/left-right.json",
+      "uploadParams": { "Key": "index.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
+    },
+    {
+      "templatePath": "./templates/nbcnews.hbs",
+      "jsonFilePath": "../lib/nbcnews.json",
+      "uploadParams": { "Key": "nbcnews.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
+    }
+  ],
   "pages": [
     {
       "url": "http://www.nbcnews.com",

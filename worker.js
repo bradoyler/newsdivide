@@ -2,7 +2,10 @@
 const dotenv = require('dotenv');
 dotenv.config({silent: true});
 const CronJob = require('cron').CronJob;
-const capture = require('./lib/captureQueue');
+const moment = require('moment-timezone');
+const persist = require('./lib/persist');
+const saveBufferToS3 = persist.saveBufferToS3;
+const capture = require('./lib/capture');
 const html = require('./lib/generateHtml');
 const manifestCache = require('./lib/manifest.json');
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
@@ -13,7 +16,7 @@ const cronScheduleC = '1 2 20 * * *';
 let manifest = JSON.parse(JSON.stringify(manifestCache));
 
 const defaults = {
-  bucket: 'newsdivide.bradoyler.com',
+  Bucket: 'newsdivide.bradoyler.com',
   defaultWhiteBackground: true,
   errorIfStatusIsNot200: true,
   timeout: 65000,
@@ -24,35 +27,55 @@ const defaults = {
   userAgent: userAgent
 };
 
+const apps = manifest.apps;
+// const hour = moment().tz('America/New_York').format('HH');
+let dayFolder = moment().tz('America/New_York').format('Y-MM-D');
+
 console.log('starting...');
-html.compile();
+apps.forEach((item) => {
+  const dailyCopyParams = {
+    Bucket: item.uploadParams.Bucket,
+    Key: `day/${dayFolder}/${item.uploadParams.Key}`,
+    CopySource: `${item.uploadParams.Bucket}/${item.uploadParams.Key}`,
+    ACL: item.uploadParams.ACL
+  };
+
+  html.compile(item.jsonFilePath, item.templatePath)
+  .then(html => saveBufferToS3(Buffer.from(html), item.uploadParams))
+  .then(console.log)
+  .then(() => persist.copyS3Object(item.uploadParams, dailyCopyParams))
+  .then(console.log)
+  .catch(console.error);
+});
+
+capture.queue(manifest.pages, defaults);
 
 const jobA = new CronJob(cronScheduleA, function () {
   console.log('>>> cron A:', cronScheduleA, new Date());
-  var options = defaults;
-  manifest = JSON.parse(JSON.stringify(manifestCache));
-  capture.queue(manifest.pages, options);
-  html.compile();
+  dayFolder = moment().tz('America/New_York').format('Y-MM-D');
+  capture.queue(manifest.pages, defaults);
+
+  // generate html file for each app
+  apps.forEach((item) => {
+    const dailyCopyParams = {
+      Bucket: item.uploadParams.Bucket,
+      Key: `day/${dayFolder}/${item.uploadParams.Key}`,
+      CopySource: `${item.uploadParams.Bucket}/${item.uploadParams.Key}`,
+      ACL: item.uploadParams.ACL
+    };
+    html.compile(item.jsonFilePath, item.templatePath)
+    .then(html => saveBufferToS3(Buffer.from(html), item.uploadParams))
+    .then(() => persist.copyS3Object(item.uploadParams, dailyCopyParams))
+    .catch(console.error);
+  });
 }, null, true, 'America/New_York');
 
 const jobB = new CronJob(cronScheduleB, function () {
   console.log('>>> cron B:', cronScheduleB, new Date());
-  var options = defaults;
-  manifest = JSON.parse(JSON.stringify(manifestCache));
-  capture.queue(manifest.pages, options);
+  capture.queue(manifest.pages, defaults);
 }, null, true, 'America/New_York');
 
 const jobC = new CronJob(cronScheduleC, function () {
   console.log('>>> cron C:', cronScheduleC, new Date());
-  var options = defaults;
-  manifest = JSON.parse(JSON.stringify(manifestCache));
-  capture.queue(manifest.pages, options);
+  capture.queue(manifest.pages, defaults);
 }, null, true, 'America/New_York');
-
-// const jobDaily = new CronJob(cron5pmDaily, function () {
-//   console.log('>>> cronDaily', new Date());
-//   dailyDivide.compile();
-// }, null, true, 'America/New_York');
-
-// startup run...
-capture.queue(manifest.pages, defaults);

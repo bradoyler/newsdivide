@@ -1,9 +1,9 @@
-const capture = require('../lib/captureQueue');
+const capture = require('../lib/capture');
 const manifestCache = require('../lib/test-manifest.json');
 let manifest = JSON.parse(JSON.stringify(manifestCache));
 
 const defaults = {
-  bucket: 'newsdivide',
+  Bucket: 'newsdivide',
   defaultWhiteBackground: true,
   errorIfStatusIsNot200: true,
   timeout: 65000,
