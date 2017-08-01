@@ -77,4 +77,4 @@ const jobC = new CronJob(cronScheduleC, function () {
   queue(manifest.pages, defaults);
 }, null, true, 'America/New_York');
 
-console.log('>>', jobA, jobB, jobC);
+console.log('>> crons', jobA.cronTime.source, jobB.cronTime.source, jobC.cronTime.source);
