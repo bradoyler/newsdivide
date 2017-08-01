@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const dotenv = require('dotenv');
 dotenv.config({silent: true});
 const CronJob = require('cron').CronJob;
@@ -12,7 +11,6 @@ const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWe
 const cronScheduleA = '1 2 1,5,6,7,8 * * *';
 const cronScheduleB = '1 */15 9-18 * * *';
 const cronScheduleC = '1 2 20 * * *';
-// const cron5pmDaily = '1 05 17 * * *';
 let manifest = JSON.parse(JSON.stringify(manifestCache));
 
 const defaults = {
@@ -28,7 +26,6 @@ const defaults = {
 };
 
 const apps = manifest.apps;
-// const hour = moment().tz('America/New_York').format('HH');
 let dayFolder = moment().tz('America/New_York').format('Y-MM-D');
 
 console.log('starting...');
@@ -79,3 +76,5 @@ const jobC = new CronJob(cronScheduleC, function () {
   console.log('>>> cron C:', cronScheduleC, new Date());
   queue(manifest.pages, defaults);
 }, null, true, 'America/New_York');
+
+console.log('>>', jobA, jobB, jobC);

@@ -1,7 +1,6 @@
 const html = require('../lib/generateHtml');
 const persist = require('../lib/persist');
 const moment = require('moment-timezone');
-// const manifest = require('../lib/data/test-manifest.json');
 const dayFolder = moment().tz('America/New_York').format('Y-MM-D');
 
 const uploadParams = {
@@ -18,7 +17,7 @@ const dailyCopyParams = {
   ACL: uploadParams.ACL
 };
 
-html.compile('../lib/left-right.json', '../lib/templates/newsdivide.hbs')
+html.compile('../lib/data/left-right.json', '../lib/templates/newsdivide.hbs')
 .then(html => {
   console.log('html:', html);
   return Buffer.from(html);
