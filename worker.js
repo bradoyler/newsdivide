@@ -5,7 +5,7 @@ const CronJob = require('cron').CronJob;
 const moment = require('moment-timezone');
 const persist = require('./lib/persist');
 const saveBufferToS3 = persist.saveBufferToS3;
-const capture = require('./lib/capture');
+const queue = require('./lib/queue');
 const html = require('./lib/generateHtml');
 const manifestCache = require('./lib/data/manifest.json');
 const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
@@ -48,12 +48,12 @@ apps.forEach((item) => {
   .catch(console.error);
 });
 
-capture.queue(manifest.pages, defaults);
+queue(manifest.pages, defaults);
 
 const jobA = new CronJob(cronScheduleA, function () {
   console.log('>>> cron A:', cronScheduleA, new Date());
   dayFolder = moment().tz('America/New_York').format('Y-MM-D');
-  capture.queue(manifest.pages, defaults);
+  queue(manifest.pages, defaults);
 
   // generate html file for each app
   apps.forEach((item) => {
@@ -72,10 +72,10 @@ const jobA = new CronJob(cronScheduleA, function () {
 
 const jobB = new CronJob(cronScheduleB, function () {
   console.log('>>> cron B:', cronScheduleB, new Date());
-  capture.queue(manifest.pages, defaults);
+  queue(manifest.pages, defaults);
 }, null, true, 'America/New_York');
 
 const jobC = new CronJob(cronScheduleC, function () {
   console.log('>>> cron C:', cronScheduleC, new Date());
-  capture.queue(manifest.pages, defaults);
+  queue(manifest.pages, defaults);
 }, null, true, 'America/New_York');
