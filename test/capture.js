@@ -1,5 +1,5 @@
 const capture = require('../lib/capture');
-const manifestCache = require('../lib/test-manifest.json');
+const manifestCache = require('../lib/data/test-manifest.json');
 let manifest = JSON.parse(JSON.stringify(manifestCache));
 
 const defaults = {
@@ -14,4 +14,4 @@ const defaults = {
   userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
 };
 
-capture.queue(manifest.pages, defaults);
+capture.page(manifest.pages[0], defaults);

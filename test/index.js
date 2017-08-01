@@ -2,9 +2,8 @@
 const dotenv = require('dotenv');
 dotenv.config({silent: true});
 const CronJob = require('cron').CronJob;
-// const capture = require('../lib/capture');
-const captureQueue = require('../lib/captureQueue');
-const testManifest = require('../lib/test-manifest.json');
+const queue = require('../lib/queue');
+const testManifest = require('../lib/data/test-manifest.json');
 const debug = require('debug')('test');
 const cronScheduleB = '1 34 9-18 * * *';
 
@@ -12,6 +11,7 @@ const mobileAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) Apple
 const desktopAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36';
 
 const options = {
+  Bucket: 'newsdivide',
   defaultWhiteBackground: true,
   errorIfStatusIsNot200: true,
   errorIfJSException: false,
@@ -20,11 +20,11 @@ const options = {
   streamType: 'jpg',
   renderDelay: 200,
   screenSize: { width: 375, height: 667 },
-  userAgent: desktopAgent
+  userAgent: mobileAgent
 };
 
 // debug('defaults ~', options);
-captureQueue.batch(testManifest.pages, options);
+queue(testManifest.pages, options);
 
 const jobB = new CronJob(cronScheduleB, function () {
   debug('>>> cron', new Date());
