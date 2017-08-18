@@ -13,6 +13,15 @@
   ],
   "pages": [
     {
+      "url": "http://www.foxnews.com",
+      "image": "www.foxnews.com.jpg",
+      "retryCount": 5,
+      "options": {
+        "renderDelay": 4500,
+        "customCSS": ".advertisement{display:none}"
+      }
+    },
+    {
       "url": "http://www.nbcnews.com",
       "image": "www.nbcnews.com_DESKTOP.jpg",
       "options": {
