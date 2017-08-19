@@ -8,9 +8,9 @@ The screenshot worker queue that powers [NewsDivide.bradoyler.com](https://newsd
 
 #### Components:
 - Nodejs 8.x
-- Headless Chrome ([puppeteer]())
+- Headless Chrome ([puppeteer](https://github.com/GoogleChrome/puppeteer))
 - AWS SDK (S3)
-- Node-cron
+- Node-Cron
 ----
 
 TODOs:
