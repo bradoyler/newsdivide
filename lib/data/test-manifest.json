@@ -14,54 +14,20 @@
   "pages": [
     {
       "url": "http://www.foxnews.com",
-      "image": "www.foxnews.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "renderDelay": 4500,
-        "customCSS": ".advertisement{display:none}"
+      "image": "www.foxnews.com_MobileTEST.jpg"
+    },
+    {
+      "url": "https://www.nbcnews.com/better",
+      "image": "www.nbcnews.com!better_DesktopTEST.jpg",
+      "viewport": {
+          "width": 1080,
+          "height": 1320,
+          "isMobile": false
       }
     },
     {
       "url": "http://www.nbcnews.com",
-      "image": "www.nbcnews.com_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
-      }
-    },
-    {
-      "url": "https://www.nbcnews.com/mach",
-      "image": "www.nbcnews.com!mach_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
-      }
-    },
-    {
-      "url": "https://www.nbcnews.com/better",
-      "image": "www.nbcnews.com!better_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
-      }
+      "image": "www.nbcnews.com_MobileTEST.jpg"
     }
   ],
   "other": [

@@ -14,7 +14,6 @@ The screenshot worker queue that powers [NewsDivide.bradoyler.com](https://newsd
 ----
 
 TODOs:
-- allow for varying screen sizes
 - twitter bot
 - get working in 'Azure / Lambda functions'
 - better tests
