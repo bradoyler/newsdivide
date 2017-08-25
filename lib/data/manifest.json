@@ -167,6 +167,16 @@
         "height": 735,
         "isMobile": false
       }
-    }
+    },
+    {
+      "url": "http://newsdivide.bradoyler.com",
+      "image": "newsdivide_FULL.jpg",
+      "fullPage": true,
+      "viewport": {
+        "width": 1240,
+        "height": 735,
+        "isMobile": false
+      }
+    },
   ]
 }

@@ -13,6 +13,20 @@
   ],
   "pages": [
     {
+      "url": "http://talkingpointsmemo.com",
+      "image": "talkingpointsmemo.com.TEST.jpg"
+    },
+    {
+      "url": "http://newsdivide.bradoyler.com",
+      "image": "newsdivide_FULL.jpg",
+      "fullPage": true,
+      "viewport": {
+        "width": 1240,
+        "height": 735,
+        "isMobile": false
+      }
+    },
+    {
       "url": "http://www.foxnews.com",
       "image": "www.foxnews.com_MobileTEST.jpg"
     },
@@ -50,17 +64,12 @@
     },
     {
       "url": "http://talkingpointsmemo.com",
-      "image": "talkingpointsmemo.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "customCSS": ".Header__MobileAdRow{display:none !important;}"
-      }
+      "image": "talkingpointsmemo.com.jpg"
     },
     {
       "url": "http://bradoyler.github.io/newsdivide/",
       "image": "newsdivide.jpg",
       "options": {
-        "customCSS": "body{padding-top: 30px;}",
         "screenSize": {
           "width": 1240,
           "height": 760
