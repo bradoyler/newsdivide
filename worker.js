@@ -1,30 +1,16 @@
 const dotenv = require('dotenv');
-dotenv.config({silent: true});
+dotenv.config({ silent: true });
 const CronJob = require('cron').CronJob;
 const moment = require('moment-timezone');
 const persist = require('./lib/persist');
 const saveBufferToS3 = persist.saveBufferToS3;
 const queue = require('./lib/queue');
 const html = require('./lib/generateHtml');
-const manifestCache = require('./lib/data/manifest.json');
-const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1';
+const manifest = require('./lib/data/manifest.json');
 const cronScheduleA = '1 2 1,5,6,7,8 * * *';
 const cronScheduleB = '1 */15 9-18 * * *';
 const cronScheduleC = '1 2 20 * * *';
-let manifest = JSON.parse(JSON.stringify(manifestCache));
-
-const defaults = {
-  Bucket: 'newsdivide.bradoyler.com',
-  defaultWhiteBackground: true,
-  errorIfStatusIsNot200: true,
-  timeout: 65000,
-  quality: 95,
-  streamType: 'jpg',
-  renderDelay: 2800,
-  screenSize: { width: 375, height: 667 },
-  userAgent: userAgent
-};
-
+const defaults = manifest.defaults;
 const apps = manifest.apps;
 let dayFolder = moment().tz('America/New_York').format('Y-MM-D');
 

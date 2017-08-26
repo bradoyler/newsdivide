@@ -11,6 +11,15 @@
       "uploadParams": { "Key": "nbcnews.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
     }
   ],
+  "defaults": {
+    "Bucket": "newsdivide",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1",
+    "type": "jpeg",
+    "quality": 80,
+    "fullPage": false,
+    "injectFile": "lib/hideAds.js",
+    "viewport": { "width": 375, "height": 667, "isMobile": true }
+  },
   "pages": [
     {
       "url": "http://talkingpointsmemo.com",
