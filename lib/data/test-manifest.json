@@ -3,12 +3,22 @@
     {
       "templatePath": "lib/templates/newsdivide.hbs",
       "jsonFilePath": "lib/data/left-right.json",
-      "uploadParams": { "Key": "index.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
+      "uploadParams": {
+        "Key": "index.html",
+        "Bucket": "newsdivide.bradoyler.com",
+        "ContentType": "text/html",
+        "ACL": "public-read"
+      }
     },
     {
       "templatePath": "lib/templates/nbcnews.hbs",
       "jsonFilePath": "lib/data/nbcnews.json",
-      "uploadParams": { "Key": "nbcnews.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
+      "uploadParams": {
+        "Key": "nbcnews.html",
+        "Bucket": "newsdivide.bradoyler.com",
+        "ContentType": "text/html",
+        "ACL": "public-read"
+      }
     }
   ],
   "defaults": {
@@ -18,12 +28,20 @@
     "quality": 80,
     "fullPage": false,
     "injectFile": "lib/hideAds.js",
-    "viewport": { "width": 375, "height": 667, "isMobile": true }
+    "viewport": {
+      "width": 375,
+      "height": 667,
+      "isMobile": true
+    }
   },
   "pages": [
     {
+      "url": "https://www.today.com",
+      "image": "www.today.com.jpg"
+    },
+    {
       "url": "http://talkingpointsmemo.com",
-      "image": "talkingpointsmemo.com.TEST.jpg"
+      "image": "talkingpointsmemo.com.jpg"
     },
     {
       "url": "http://newsdivide.bradoyler.com",
@@ -36,21 +54,18 @@
       }
     },
     {
-      "url": "http://www.foxnews.com",
-      "image": "www.foxnews.com_MobileTEST.jpg"
-    },
-    {
       "url": "https://www.nbcnews.com/better",
-      "image": "www.nbcnews.com!better_DesktopTEST.jpg",
+      "image": "www.nbcnews.com!better_DESKTOP.jpg",
+      "injectFile": "lib/noop.js",
       "viewport": {
-          "width": 1080,
-          "height": 1320,
-          "isMobile": false
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
       }
     },
     {
-      "url": "http://www.nbcnews.com",
-      "image": "www.nbcnews.com_MobileTEST.jpg"
+      "url": "https://www.nbcnews.com",
+      "image": "www.nbcnews.com.jpg"
     }
   ],
   "other": [
@@ -60,20 +75,7 @@
     },
     {
       "url": "http://m.huffpost.com",
-      "image": "test.huffpost.com.jpg",
-      "retryCount": 2,
-      "options": {
-        "shotSize": {
-          "width": 700,
-          "height": 1245
-        },
-        "zoomFactor": 0.5,
-        "customCSS": ".advertisement{display:none;} #adsDiv0{display:none;}"
-      }
-    },
-    {
-      "url": "http://talkingpointsmemo.com",
-      "image": "talkingpointsmemo.com.jpg"
+      "image": "m.huffpost.com.jpg"
     },
     {
       "url": "http://bradoyler.github.io/newsdivide/",

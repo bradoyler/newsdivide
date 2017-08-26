@@ -9,8 +9,16 @@
       "image": "www.nbcnews.com!better.jpg"
     },
     {
+      "url": "https://www.nbcnews.com/leftfield",
+      "image": "www.nbcnews.com!leftfield.jpg"
+    },
+    {
       "url": "http://www.nbcnews.com",
       "image": "www.nbcnews.com.jpg"
+    },
+    {
+      "url": "https://www.today.com",
+      "image": "www.today.com.jpg"
     }
   ],
   "desktop": [
@@ -23,8 +31,16 @@
       "image": "www.nbcnews.com!better_DESKTOP.jpg"
     },
     {
+      "url": "https://www.nbcnews.com/leftfield",
+      "image": "www.nbcnews.com!leftfield_DESKTOP.jpg"
+    },
+    {
       "url": "http://www.nbcnews.com",
       "image": "www.nbcnews.com_DESKTOP.jpg"
+    },
+    {
+      "url": "https://www.today.com",
+      "image": "www.today.com_DESKTOP.jpg"
     }
   ]
 }

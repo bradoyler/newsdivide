@@ -28,7 +28,11 @@
     "quality": 80,
     "fullPage": false,
     "injectFile": "lib/hideAds.js",
-    "viewport": { "width": 375, "height": 667, "isMobile": true }
+    "viewport": {
+      "width": 375,
+      "height": 667,
+      "isMobile": true
+    }
   },
   "pages": [
     {
@@ -66,6 +70,10 @@
     {
       "url": "https://www.nbcnews.com/better",
       "image": "www.nbcnews.com!better.jpg"
+    },
+    {
+      "url": "https://www.nbcnews.com/leftfield",
+      "image": "www.nbcnews.com!leftfield.jpg"
     },
     {
       "url": "https://www.washingtonpost.com",
@@ -157,6 +165,20 @@
       "image": "www.redstate.com.jpg"
     },
     {
+      "url": "https://www.today.com",
+      "image": "www.today.com.jpg"
+    },
+    {
+      "url": "https://www.today.com",
+      "image": "www.today.com_DESKTOP.jpg",
+      "quality": 70,
+      "viewport": {
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
+      }
+    },
+    {
       "url": "http://www.nbcnews.com",
       "image": "www.nbcnews.com_DESKTOP.jpg",
       "quality": 70,
@@ -169,6 +191,7 @@
     {
       "url": "https://www.nbcnews.com/mach",
       "image": "www.nbcnews.com!mach_DESKTOP.jpg",
+      "injectFile": "lib/noop.js",
       "quality": 70,
       "viewport": {
         "width": 1080,
@@ -179,6 +202,18 @@
     {
       "url": "https://www.nbcnews.com/better",
       "image": "www.nbcnews.com!better_DESKTOP.jpg",
+      "quality": 70,
+      "injectFile": "lib/noop.js",
+      "viewport": {
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
+      }
+    },
+    {
+      "url": "https://www.nbcnews.com/leftfield",
+      "image": "www.nbcnews.com!leftfield_DESKTOP.jpg",
+      "injectFile": "lib/noop.js",
       "quality": 70,
       "viewport": {
         "width": 1080,
