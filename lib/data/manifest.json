@@ -65,14 +65,18 @@
     },
     {
       "url": "https://www.nbcnews.com/mach",
+      "injectFile": "lib/noop.js",
       "image": "www.nbcnews.com!mach.jpg"
     },
     {
       "url": "https://www.nbcnews.com/better",
+      "injectFile": "lib/noop.js",
+      "quality": 99,
       "image": "www.nbcnews.com!better.jpg"
     },
     {
       "url": "https://www.nbcnews.com/leftfield",
+      "injectFile": "lib/noop.js",
       "image": "www.nbcnews.com!leftfield.jpg"
     },
     {
@@ -153,8 +157,7 @@
     },
     {
       "url": "http://talkingpointsmemo.com",
-      "image": "talkingpointsmemo.com.jpg",
-      "customCSS": ".Header__MobileAdRow{display:none !important;}"
+      "image": "talkingpointsmemo.com.jpg"
     },
     {
       "url": "http://www.cnbc.com",
