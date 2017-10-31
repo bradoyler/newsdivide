@@ -19,7 +19,7 @@ const dailyCopyParams = {
 
 html.compile('../lib/data/left-right.json', '../lib/templates/newsdivide.hbs')
 .then(html => {
-  console.log('html:', html);
+  // console.log('html:', html);
   return Buffer.from(html);
 })
 .then(html => persist.saveBufferToS3(Buffer.from(html), uploadParams))
