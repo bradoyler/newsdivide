@@ -65,7 +65,6 @@
     },
     {
       "url": "https://www.nbcnews.com/mach",
-      "injectFile": "lib/noop.js",
       "image": "www.nbcnews.com!mach.jpg"
     },
     {
@@ -194,8 +193,7 @@
     {
       "url": "https://www.nbcnews.com/mach",
       "image": "www.nbcnews.com!mach_DESKTOP.jpg",
-      "injectFile": "lib/noop.js",
-      "quality": 70,
+      "quality": 80,
       "viewport": {
         "width": 1080,
         "height": 1320,
