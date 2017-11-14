@@ -3,56 +3,69 @@
     {
       "templatePath": "lib/templates/newsdivide.hbs",
       "jsonFilePath": "lib/data/left-right.json",
-      "uploadParams": { "Key": "index.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
+      "uploadParams": {
+        "Key": "index.html",
+        "Bucket": "newsdivide.bradoyler.com",
+        "ContentType": "text/html",
+        "ACL": "public-read"
+      }
     },
     {
       "templatePath": "lib/templates/nbcnews.hbs",
       "jsonFilePath": "lib/data/nbcnews.json",
-      "uploadParams": { "Key": "nbcnews.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
+      "uploadParams": {
+        "Key": "nbcnews.html",
+        "Bucket": "newsdivide.bradoyler.com",
+        "ContentType": "text/html",
+        "ACL": "public-read"
+      }
     }
   ],
+  "defaults": {
+    "Bucket": "newsdivide",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1",
+    "type": "jpeg",
+    "quality": 80,
+    "fullPage": false,
+    "injectFile": "lib/hideAds.js",
+    "viewport": {
+      "width": 375,
+      "height": 667,
+      "isMobile": true
+    }
+  },
   "pages": [
     {
-      "url": "http://www.nbcnews.com",
-      "image": "www.nbcnews.com_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
-      }
+      "url": "https://www.today.com",
+      "image": "www.today.com.jpg"
     },
     {
-      "url": "https://www.nbcnews.com/mach",
-      "image": "www.nbcnews.com!mach_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
+      "url": "http://talkingpointsmemo.com",
+      "image": "talkingpointsmemo.com.jpg"
+    },
+    {
+      "url": "http://newsdivide.bradoyler.com",
+      "image": "newsdivide_FULL.jpg",
+      "fullPage": true,
+      "viewport": {
+        "width": 1240,
+        "height": 735,
+        "isMobile": false
       }
     },
     {
       "url": "https://www.nbcnews.com/better",
       "image": "www.nbcnews.com!better_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
+      "injectFile": "lib/noop.js",
+      "viewport": {
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
       }
+    },
+    {
+      "url": "https://www.nbcnews.com",
+      "image": "www.nbcnews.com.jpg"
     }
   ],
   "other": [
@@ -61,31 +74,13 @@
       "image": "www.redstate.com.jpg"
     },
     {
-      "url": "http://m.huffpost.com",
-      "image": "test.huffpost.com.jpg",
-      "retryCount": 2,
-      "options": {
-        "shotSize": {
-          "width": 700,
-          "height": 1245
-        },
-        "zoomFactor": 0.5,
-        "customCSS": ".advertisement{display:none;} #adsDiv0{display:none;}"
-      }
-    },
-    {
-      "url": "http://talkingpointsmemo.com",
-      "image": "talkingpointsmemo.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "customCSS": ".Header__MobileAdRow{display:none !important;}"
-      }
+      "url": "https://m.huffpost.com",
+      "image": "m.huffpost.com.jpg"
     },
     {
       "url": "http://bradoyler.github.io/newsdivide/",
       "image": "newsdivide.jpg",
       "options": {
-        "customCSS": "body{padding-top: 30px;}",
         "screenSize": {
           "width": 1240,
           "height": 760

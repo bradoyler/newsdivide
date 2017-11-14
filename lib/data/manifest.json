@@ -3,21 +3,41 @@
     {
       "templatePath": "lib/templates/newsdivide.hbs",
       "jsonFilePath": "lib/data/left-right.json",
-      "uploadParams": { "Key": "index.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
+      "uploadParams": {
+        "Key": "index.html",
+        "Bucket": "newsdivide.bradoyler.com",
+        "ContentType": "text/html",
+        "ACL": "public-read"
+      }
     },
     {
       "templatePath": "lib/templates/nbcnews.hbs",
       "jsonFilePath": "lib/data/nbcnews.json",
-      "uploadParams": { "Key": "nbcnews.html", "Bucket": "newsdivide.bradoyler.com", "ContentType": "text/html", "ACL": "public-read"}
+      "uploadParams": {
+        "Key": "nbcnews.html",
+        "Bucket": "newsdivide.bradoyler.com",
+        "ContentType": "text/html",
+        "ACL": "public-read"
+      }
     }
   ],
+  "defaults": {
+    "Bucket": "newsdivide.bradoyler.com",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1",
+    "type": "jpeg",
+    "quality": 80,
+    "fullPage": false,
+    "injectFile": "lib/hideAds.js",
+    "viewport": {
+      "width": 375,
+      "height": 667,
+      "isMobile": true
+    }
+  },
   "pages": [
     {
       "url": "https://www.apnews.com",
-      "image": "www.apnews.com.jpg",
-      "options": {
-        "renderDelay": 7000
-      }
+      "image": "www.apnews.com.jpg"
     },
     {
       "url": "http://www.npr.org",
@@ -25,85 +45,23 @@
     },
     {
       "url": "http://nypost.com",
-      "image": "nypost.com.jpg",
-      "options": {
-        "renderDelay": 6000,
-        "customCSS": ".dfp-ad {display: none}"
-      }
+      "image": "nypost.com.jpg"
     },
     {
       "url": "http://www.cnn.com",
-      "image": "www.cnn.com.jpg",
-      "retryCount": 2,
-      "options": {
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "www.cnn.com.jpg"
     },
     {
       "url": "http://www.nydailynews.com",
-      "image": "www.nydailynews.com.jpg",
-      "retryCount": 2,
-      "options": {
-        "renderDelay": 3400,
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "www.nydailynews.com.jpg"
     },
     {
       "url": "http://mobile.reuters.com",
-      "image": "mobile.reuters.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "customCSS": "iframe{display:none !important} div{background: rgba(0, 0, 0, 0) !important}"
-      }
+      "image": "mobile.reuters.com.jpg"
     },
     {
       "url": "http://www.nbcnews.com",
-      "image": "www.nbcnews.com.jpg",
-      "options": {
-        "customCSS": ".ad_wrapper{display:none} iframe{display:none !important}"
-      }
-    },
-    {
-      "url": "http://www.nbcnews.com",
-      "image": "www.nbcnews.com_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
-      }
-    },
-    {
-      "url": "https://www.nbcnews.com/mach",
-      "image": "www.nbcnews.com!mach_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
-      }
-    },
-    {
-      "url": "https://www.nbcnews.com/better",
-      "image": "www.nbcnews.com!better_DESKTOP.jpg",
-      "options": {
-        "shotSize": {
-          "width": "all",
-          "height": "window"
-        },
-        "windowSize": {
-          "width": 1080,
-          "height": 1320
-        }
-      }
+      "image": "www.nbcnews.com.jpg"
     },
     {
       "url": "https://www.nbcnews.com/mach",
@@ -111,212 +69,178 @@
     },
     {
       "url": "https://www.nbcnews.com/better",
+      "injectFile": "lib/noop.js",
+      "quality": 99,
       "image": "www.nbcnews.com!better.jpg"
     },
     {
+      "url": "https://www.nbcnews.com/leftfield",
+      "injectFile": "lib/noop.js",
+      "image": "www.nbcnews.com!leftfield.jpg"
+    },
+    {
       "url": "https://www.washingtonpost.com",
-      "image": "www.washingtonpost.com.jpg",
-      "options": {
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "www.washingtonpost.com.jpg"
     },
     {
       "url": "http://www.wsj.com",
-      "image": "www.wsj.com.jpg",
-      "options": {
-        "renderDelay": 10,
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "www.wsj.com.jpg"
     },
     {
       "url": "http://www.breitbart.com",
-      "image": "www.breitbart.com.jpg",
-      "options": {
-        "settings": {
-          "javascriptEnabled": false
-        },
-        "renderDelay": 500,
-        "customCSS": "#BBStoreLead{display:none;} header{height:0px} #isc_front_takeover_overlay{background:transparent;}"
-      }
+      "image": "www.breitbart.com.jpg"
     },
     {
       "url": "http://www.theblaze.com",
-      "image": "www.theblaze.com.jpg",
-      "options": {
-        "customCSS": ".ad{display:none !important;} .top-ad{display:none !important;}"
-      }
+      "image": "www.theblaze.com.jpg"
     },
     {
       "url": "http://dailycaller.com",
-      "image": "dailycaller.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "timeout": 65000,
-        "customCSS": "iframe{display:none !important} .ad_container{display:none !important}"
-      }
+      "image": "dailycaller.com.jpg"
     },
     {
       "url": "http://idrudgereport.com",
-      "image": "idrudgereport.com.jpg",
-      "options": {
-        "shotOffset": {
-          "left": 0,
-          "right": 0,
-          "top": 280,
-          "bottom": 0
-        }
-      }
+      "image": "idrudgereport.com.jpg"
     },
     {
       "url": "http://www.drudgereport.com",
-      "image": "www.drudgereport.com.jpg",
-      "options": {
-        "shotOffset": {
-          "left": 0,
-          "right": 0,
-          "top": 130,
-          "bottom": 0
-        },
-        "customCSS": "html{zoom: 0.45;}"
-      }
+      "image": "www.drudgereport.com.jpg"
     },
     {
       "url": "http://www.msnbc.com",
-      "image": "www.msnbc.com.jpg",
-      "options": {
-        "customCSS": ".advert--pencil{display:none}"
-      }
+      "image": "www.msnbc.com.jpg"
     },
     {
       "url": "http://www.foxnews.com",
-      "image": "www.foxnews.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "renderDelay": 4500,
-        "customCSS": ".advertisement{display:none}"
-      }
+      "image": "www.foxnews.com.jpg"
     },
     {
       "url": "http://www.nytimes.com",
-      "image": "www.nytimes.com.jpg",
-      "options": {
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "www.nytimes.com.jpg"
     },
     {
       "url": "https://news.vice.com",
-      "image": "news.vice.com.jpg",
-      "options": {
-        "customCSS": ".ad__wrapper{display:none} .flite-mask {display: none;} .flite-lightbox {display: none;}",
-        "renderDelay": 500
-      }
+      "image": "news.vice.com.jpg"
     },
     {
       "url": "http://www.latimes.com",
-      "image": "www.latimes.com.jpg",
-      "options": {
-        "customCSS": ".trb_masthead_adBanner{display:none}"
-      }
-    },
-    {
-      "url": "http://qz.com",
-      "image": "qz.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "customCSS": "#marquee{display:none} iframe{display:none !important}"
-      }
+      "image": "www.latimes.com.jpg"
     },
     {
       "url": "http://www.bloomberg.com",
-      "image": "www.bloomberg.com.jpg",
-      "retryCount": 2,
-      "options": {
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "www.bloomberg.com.jpg"
     },
     {
-      "url": "http://m.huffpost.com",
-      "image": "m.huffpost.com.jpg",
-      "retryCount": 2,
-      "options": {
-        "customCSS": ".advertisement{display:none;} #adsDiv0{display:none;}",
-        "shotSize": {
-          "width": 690,
-          "height": 1227
-        }
-      }
+      "url": "https://m.huffpost.com",
+      "image": "m.huffpost.com.jpg"
     },
     {
       "url": "http://abcnews.go.com",
-      "image": "abcnews.go.com.jpg",
-      "options": {
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "abcnews.go.com.jpg"
     },
     {
       "url": "http://www.cbsnews.com",
-      "image": "www.cbsnews.com.jpg",
-      "options": {
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "www.cbsnews.com.jpg"
     },
     {
       "url": "https://newrepublic.com",
-      "image": "newrepublic.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "newrepublic.com.jpg"
     },
     {
       "url": "http://www.motherjones.com",
-      "image": "www.motherjones.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "timeout": 71000,
-        "renderDelay": 200,
-        "customCSS": "#bg {display: none;} #AT_OVERLAY_LAYER{display:none;} #AT_OVERLAY_BACKGROUND{display:none;}"
-      }
+      "image": "www.motherjones.com.jpg"
     },
     {
       "url": "http://www.slate.com",
-      "image": "www.slate.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "customCSS": ".ad{display:none !important;}"
-      }
+      "image": "www.slate.com.jpg"
     },
     {
       "url": "http://talkingpointsmemo.com",
-      "image": "talkingpointsmemo.com.jpg",
-      "retryCount": 5,
-      "options": {
-        "customCSS": ".Header__MobileAdRow{display:none !important;}"
-      }
+      "image": "talkingpointsmemo.com.jpg"
     },
     {
       "url": "http://www.cnbc.com",
-      "image": "www.cnbc.com.jpg",
-      "options": {
-        "customCSS": "iframe{display:none !important}"
-      }
+      "image": "www.cnbc.com.jpg"
     },
     {
       "url": "http://www.redstate.com",
       "image": "www.redstate.com.jpg"
     },
     {
+      "url": "https://www.today.com",
+      "image": "www.today.com.jpg"
+    },
+    {
+      "url": "https://www.today.com",
+      "image": "www.today.com_DESKTOP.jpg",
+      "quality": 70,
+      "viewport": {
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
+      }
+    },
+    {
+      "url": "http://www.nbcnews.com",
+      "image": "www.nbcnews.com_DESKTOP.jpg",
+      "quality": 70,
+      "viewport": {
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
+      }
+    },
+    {
+      "url": "https://www.nbcnews.com/mach",
+      "image": "www.nbcnews.com!mach_DESKTOP.jpg",
+      "quality": 80,
+      "viewport": {
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
+      }
+    },
+    {
+      "url": "https://www.nbcnews.com/better",
+      "image": "www.nbcnews.com!better_DESKTOP.jpg",
+      "quality": 70,
+      "injectFile": "lib/noop.js",
+      "viewport": {
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
+      }
+    },
+    {
+      "url": "https://www.nbcnews.com/leftfield",
+      "image": "www.nbcnews.com!leftfield_DESKTOP.jpg",
+      "injectFile": "lib/noop.js",
+      "quality": 70,
+      "viewport": {
+        "width": 1080,
+        "height": 1320,
+        "isMobile": false
+      }
+    },
+    {
       "url": "http://newsdivide.bradoyler.com",
       "image": "newsdivide.jpg",
-      "options": {
-        "screenSize": {
-          "width": 1240,
-          "height": 735
-        },
-        "windowSize": {
-          "width": 1240,
-          "height": 735
-        }
+      "quality": 70,
+      "viewport": {
+        "width": 1240,
+        "height": 735,
+        "isMobile": false
+      }
+    },
+    {
+      "url": "http://newsdivide.bradoyler.com",
+      "image": "newsdivide_FULL.jpg",
+      "quality": 60,
+      "fullPage": true,
+      "viewport": {
+        "width": 1240,
+        "height": 735,
+        "isMobile": false
       }
     }
   ]
