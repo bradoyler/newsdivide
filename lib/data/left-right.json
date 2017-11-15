@@ -27,6 +27,10 @@
     {
       "url": "http://www.motherjones.com",
       "image": "www.motherjones.com.jpg"
+    },
+    {
+      "url": "https://newrepublic.com",
+      "image": "newrepublic.com.jpg"
     }
   ],
   "right_sites": [
@@ -43,10 +47,6 @@
       "image": "www.redstate.com.jpg"
     },
     {
-      "url": "http://www.breitbart.com",
-      "image": "www.breitbart.com.jpg"
-    },
-    {
       "url": "http://nypost.com",
       "image": "nypost.com.jpg"
     },
@@ -55,8 +55,16 @@
       "image": "www.theblaze.com.jpg"
     },
     {
+      "url": "http://www.breitbart.com",
+      "image": "www.breitbart.com.jpg"
+    },
+    {
       "url": "http://dailycaller.com",
       "image": "dailycaller.com.jpg"
+    },
+    {
+      "url": "http://www.nationalreview.com",
+      "image": "www.nationalreview.com.jpg"
     }
   ],
   "center_sites": [
@@ -87,6 +95,10 @@
     {
       "url": "http://www.npr.org",
       "image": "www.npr.org.jpg"
+    },
+    {
+      "url": "http://www.latimes.com",
+      "image": "www.latimes.com.jpg"
     }
   ]
 }
