@@ -25,25 +25,24 @@
 </head>
 <body>
 <style>
-  @media only screen  and (max-width : 768px) { .nav { display: none;}  }
+
   ul {list-style-type: none;}
+
   li {
     margin-bottom: 3px;
     border-color: #2e6da4;
     background-color: #337ab7;
   }
 
-  li:hover {
-    background-color: #CCC;
-  }
+  li:hover { background-color: #CCC; }
 
   .nav { float: right; }
 
   .btn {
-    font-size: 0.8em;
+    font-size: 1em;
     font-family: monospace;
     color: #fff;
-    padding: 2px;
+    padding: 0.5em;
     margin-bottom: 6px;
     cursor: pointer;
     border-color: #2e6da4;
@@ -61,10 +60,10 @@
     margin-top: 1em;
   }
 
-  .title {
-    font-family: monospace;
-    font-size: 1.5em;
-  }
+  .title { font-family: monospace; font-size: 1.5em; }
+
+  @media only screen and (max-width : 768px) { .nav { display: none;}  }
+  @media screen and (min-width : 1400px) { .btn { font-size: 1.4em !important; }  }
 </style>
 <div class="nav">
   <ul>
@@ -146,6 +145,12 @@
    $('img').css('height', '320px');
    $('#compact').hide();
  });
+
+ var refreshInt = 5 * 60 * 1000
+ setTimeout(function () {
+   window.location.reload(1);
+ }, refreshInt)
+
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

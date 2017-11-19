@@ -11,3 +11,6 @@ npm-debug.log
 aws_config.json
 .env
 /dist/
+
+# test files
+test.html
