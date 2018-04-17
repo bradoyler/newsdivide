@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "semistandard && node test",
-    "format": "semistandard --fix"
+    "test": "standard && node test",
+    "format": "standard --fix"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-react": "7.1.0",
-    "semistandard": "^11.0.0"
+    "standard": "^11.0.1"
   },
   "engines": {
     "node": "8.1.x"
