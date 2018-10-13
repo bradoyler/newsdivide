@@ -17,8 +17,7 @@ const cronSchedules = [
   '1 */15 9-18 * * *', // peak hours
   '1 2 20 * * *' // 8 pm update
 ]
-const defaults = manifest.defaults
-const apps = manifest.apps
+const { defaults, apps, pages } = manifest
 let dayFolder = moment().tz('America/New_York').format('Y-MM-D')
 
 if (autostart) {
@@ -39,7 +38,7 @@ if (autostart) {
       .catch(console.error)
   })
   // run captures on startup
-  queue(manifest.pages, defaults)
+  queue(pages, defaults)
 }
 
 // start job for generating html
@@ -50,7 +49,7 @@ console.log('>> create htmlJob cron:', htmlJob.cronTime.source)
 cronSchedules.forEach((cronTime, idx) => {
   function onTick () {
     console.log(`>>> exec capture cron ${idx}:`, cronTime, new Date())
-    queue(manifest.pages, defaults)
+    queue(pages, defaults)
   }
 
   const cronJob = new CronJob({ cronTime, onTick, start: true, timeZone })
