@@ -6,12 +6,14 @@ const defaults = {
   fullPage: false
 }
 
+const domain = 'drudgereport.com'
+
 puppeteer.launch().then(async browser => {
   const page = await browser.newPage()
   await page.setViewport({ width: 375, height: 667, isMobile: true })
-  await page.goto('https://www.nbcnews.com/mach')
+  await page.goto(`https://${domain}`)
   await page.addScriptTag({path: 'lib/hideAds.js'})
-  defaults.path = 'test/www.nbcnews.mach.jpg'
+  defaults.path = `test/images/${domain}.jpg`
   await page.screenshot(defaults)
 
   // await page.goto('https://www.nbcnews.com');
