@@ -11,10 +11,10 @@
       }
     },
     {
-      "templatePath": "lib/templates/nbcnews.hbs",
-      "jsonFilePath": "lib/data/nbcnews.json",
+      "templatePath": "lib/templates/newsdivide2.hbs",
+      "jsonFilePath": "lib/data/test-sites.json",
       "uploadParams": {
-        "Key": "nbcnews.html",
+        "Key": "index2.html",
         "Bucket": "newsdivide.bradoyler.com",
         "ContentType": "text/html",
         "ACL": "public-read"
@@ -64,38 +64,23 @@
       "image": "www.nbcnews.com.jpg"
     },
     {
-      "url": "https://www.nbcnews.com/mach",
-      "image": "www.nbcnews.com!mach.jpg"
-    },
-    {
-      "url": "https://www.nbcnews.com/better",
-      "injectFile": "lib/noop.js",
-      "quality": 99,
-      "image": "www.nbcnews.com!better.jpg"
-    },
-    {
-      "url": "https://www.nbcnews.com/leftfield",
-      "injectFile": "lib/noop.js",
-      "image": "www.nbcnews.com!leftfield.jpg"
-    },
-    {
       "url": "https://www.washingtonpost.com",
       "image": "www.washingtonpost.com.jpg"
     },
     {
-      "url": "http://www.wsj.com",
+      "url": "https://www.wsj.com",
       "image": "www.wsj.com.jpg"
     },
     {
-      "url": "http://www.breitbart.com",
+      "url": "https://www.breitbart.com",
       "image": "www.breitbart.com.jpg"
     },
     {
-      "url": "http://www.theblaze.com",
+      "url": "https://www.theblaze.com",
       "image": "www.theblaze.com.jpg"
     },
     {
-      "url": "http://dailycaller.com",
+      "url": "https://dailycaller.com",
       "image": "dailycaller.com.jpg"
     },
     {
@@ -183,38 +168,6 @@
     {
       "url": "http://www.nbcnews.com",
       "image": "www.nbcnews.com_DESKTOP.jpg",
-      "quality": 70,
-      "viewport": {
-        "width": 1080,
-        "height": 1320,
-        "isMobile": false
-      }
-    },
-    {
-      "url": "https://www.nbcnews.com/mach",
-      "image": "www.nbcnews.com!mach_DESKTOP.jpg",
-      "quality": 80,
-      "viewport": {
-        "width": 1080,
-        "height": 1320,
-        "isMobile": false
-      }
-    },
-    {
-      "url": "https://www.nbcnews.com/better",
-      "image": "www.nbcnews.com!better_DESKTOP.jpg",
-      "quality": 70,
-      "injectFile": "lib/noop.js",
-      "viewport": {
-        "width": 1080,
-        "height": 1320,
-        "isMobile": false
-      }
-    },
-    {
-      "url": "https://www.nbcnews.com/leftfield",
-      "image": "www.nbcnews.com!leftfield_DESKTOP.jpg",
-      "injectFile": "lib/noop.js",
       "quality": 70,
       "viewport": {
         "width": 1080,
