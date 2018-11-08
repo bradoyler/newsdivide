@@ -69,10 +69,6 @@
   ],
   "center_sites": [
     {
-      "url": "https://www.nbcnews.com",
-      "image": "www.nbcnews.com.jpg"
-    },
-    {
       "url": "https://www.cnn.com",
       "image": "www.cnn.com.jpg"
     },
@@ -83,6 +79,10 @@
     {
       "url": "https://www.nytimes.com",
       "image": "www.nytimes.com.jpg"
+    },
+    {
+      "url": "https://www.nbcnews.com",
+      "image": "www.nbcnews.com.jpg"
     },
     {
       "url": "https://www.apnews.com",

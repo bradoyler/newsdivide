@@ -140,40 +140,12 @@
       "image": "talkingpointsmemo.com.jpg"
     },
     {
-      "url": "http://www.cnbc.com",
-      "image": "www.cnbc.com.jpg"
-    },
-    {
       "url": "http://www.redstate.com",
       "image": "www.redstate.com.jpg"
     },
     {
       "url": "http://www.nationalreview.com",
       "image": "www.nationalreview.com.jpg"
-    },
-    {
-      "url": "https://www.today.com",
-      "image": "www.today.com.jpg"
-    },
-    {
-      "url": "https://www.today.com",
-      "image": "www.today.com_DESKTOP.jpg",
-      "quality": 70,
-      "viewport": {
-        "width": 1080,
-        "height": 1320,
-        "isMobile": false
-      }
-    },
-    {
-      "url": "http://www.nbcnews.com",
-      "image": "www.nbcnews.com_DESKTOP.jpg",
-      "quality": 70,
-      "viewport": {
-        "width": 1080,
-        "height": 1320,
-        "isMobile": false
-      }
     },
     {
       "url": "http://newsdivide.bradoyler.com",
