@@ -17,79 +17,39 @@
 <meta name="twitter:description" content="Snapshots from the Reading Habits of Left, Right and Center"/>
 <meta name="twitter:creator" content="@thenewsdivide"/>
 <meta name="twitter:domain" content="bradoyler.github.io"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css">
 <meta name="twitter:image" content="https://newsdivide.bradoyler.com/day/{{date-slug}}/newsdivide.jpg"/>
 <title>The News Divide: {{date-short}}</title>
 <script type="text/javascript">
   var baseUrl = 'https://newsdivide.bradoyler.com/day/{{date-slug}}/';
 </script>
 </head>
-<body>
-<style>
-
-  ul {list-style-type: none;}
-
-  li {
-    margin-bottom: 3px;
-    border-color: #2e6da4;
-    background-color: #337ab7;
-  }
-
-  li:hover { background-color: #CCC; }
-
-  .nav { float: right; }
-
-  .btn {
-    font-size: 1em;
-    font-family: monospace;
-    color: #fff;
-    padding: 0.5em;
-    margin-bottom: 6px;
-    cursor: pointer;
-    border-color: #2e6da4;
-  }
-  .btn:hover {
-    color: #000;
-    background-color: #ccc;
-    border-color: #2e6da4;
-  }
-  .image {
-    max-height: 660px;
-    max-width: 98%;
-    margin-left: 6px;
-    box-shadow: 0 0 .7em #999;
-    margin-top: 1em;
-  }
-
-  .title { font-family: monospace; font-size: 1.5em; }
-
-  @media only screen and (max-width : 768px) { .nav { display: none;}  }
-  @media screen and (min-width : 1400px) { .btn { font-size: 1.4em !important; }  }
-</style>
-<div class="nav">
-  <ul>
-    <li><a id="compact" type="button" class="btn">Compact</a></li>
-    <li><a target="_blank" href="https://twitter.com/intent/tweet?source=tweetbutton&url=https://newsdivide.bradoyler.com/day/{{date-slug}}/&text={{date-short}}&via=thenewsdivide" class="btn">Tweet this</a></li>
-    <li><a id="archive" href="/day/{{yesterday-slug}}" class="btn"><< {{yesterday-short}}</a></li>
+<body class="sans-serif ph4-l w-80-l center">
+<div class="nav w-100 bg-white bb">
+  <ul class="list ma0 pa0 tc f5">
+    <li class="dib pa2"><a class="link pointer ph3 pv1 br2 mb2 mh2 dib white bg-dark-gray" id="archive" href="/day/{{yesterday-slug}}" class="btn"><< {{yesterday-short}}</a></li>
+    <li class="dib pa2"><a class="link pointer ph3 pv1 br2 mb2 mh2 dib gray bg-light-gray ba b--dark-gray" id="compact">Compact mode</a></li>
+    <li class="dib pa2"><a class="link pointer ph3 pv1 br2 mb2 mh2 dib white bg-black" target="_blank" href="https://twitter.com/intent/tweet?source=tweetbutton&url=https://newsdivide.bradoyler.com/day/{{date-slug}}/&text={{date-short}}&via=thenewsdivide" class="btn">Tweet this</a></li>
   </ul>
 </div>
 <div class="container swiper-container">
   <div class="row swiper-wrapper">
-    <div class="left_sites col-sm-4 col-xs-12 swiper-slide">
-      <div class="title">LEFT</div>
+    <div class="left_sites w-third-l w-100 swiper-slide">
+      <div class="f6 pa2 tc">LEFT</div>
     </div>
-    <div class="center_sites col-sm-4 col-xs-12 swiper-slide">
-      <div class="title">CENTER</div>
+    <div class="center_sites w-third-l w-100 swiper-slide">
+      <div class="f6 pa2 tc">CENTER</div>
     </div>
-    <div class="right_sites col-sm-4 col-xs-12 swiper-slide">
-      <div class="title">RIGHT</div>
+    <div class="right_sites w-third-l w-100 swiper-slide">
+      <div class="f6 pa2 tc">RIGHT</div>
     </div>
   </div>
   <hr />
   <h2>
-    <a href="/day/{{yesterday-slug}}"> << ({{yesterday-short}})</a>
+    <a class="link black" href="/day/{{yesterday-slug}}"> << ({{yesterday-short}})</a>
   </h2>
   <h4>
-    <a target="blank" href="https://twitter.com/thenewsdivide">Feedback / Questions?</a>
+    <a class="link black underline" target="blank" href="https://twitter.com/thenewsdivide">Feedback / Questions?</a>
   </h4>
 </div>
 
@@ -107,15 +67,18 @@
    var hour = new Date().getHours();
    var min = Math.round(jsDate.getMinutes() / 9);
    var minOfDay = hour + '_' + min;
+   var imageClasses = "center w-100 mb2"
+   var linkClasses = "pa0 ma0"
 
    data.left_sites.forEach(function(page){
-     $('.left_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
+     var imgUrl = baseUrl + page.image
+     $('.left_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${imgUrl}?min=${minOfDay}" /></a>`);
    });
    data.center_sites.forEach(function(page){
-     $('.center_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
+     $('.center_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${baseUrl + page.image}?min=${minOfDay}" /></a>`);
    });
    data.right_sites.forEach(function(page){
-     $('.right_sites').append('<a href="'+page.url+'" target="blank"><img class="image" src="'+ baseUrl + page.image +'?min='+ minOfDay +'" /></a>');
+     $('.right_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${baseUrl + page.image}?min=${minOfDay}" /></a>`);
    });
 
    var swipeEffect = isMobile ? 'coverflow' : 'slide';
@@ -127,7 +90,6 @@
           slidesPerView: '3',
           breakpoints: {
               1024: { slidesPerView: 3, spaceBetween: 10},
-              768: { slidesPerView: 2, spaceBetween: 10},
               420: { slidesPerView: 1, spaceBetween: 0},
               320: { slidesPerView: 1, spaceBetween: 0}
           },
@@ -141,9 +103,20 @@
     });
  });
 
+ window.compactMode = false
  $('#compact').on('click', function () {
-   $('img').css('height', '320px');
-   $('#compact').hide();
+   window.compactMode = !window.compactMode
+   if (window.compactMode) {
+     $('#compact').addClass('o-50')
+     $('img').removeClass('w-100 center')
+     $('img').addClass('w-50 bn pa0 ma0 fl')
+     $('.swiper-slide').addClass('pa0 ma0')
+   } else {
+     $('#compact').removeClass('o-50')
+     $('img').addClass('w-100 center')
+     $('img').removeClass('w-50 bn pa0 ma0 fl')
+     $('.swiper-slide').addClass('pa0 ma0')
+   }
  });
 
  var refreshInt = 5 * 60 * 1000
