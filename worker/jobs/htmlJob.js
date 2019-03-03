@@ -18,7 +18,6 @@ function job () {
       Bucket: item.uploadParams.Bucket,
       Key: `day/${dayFolder}/${item.uploadParams.Key}`,
       CopySource: `${item.uploadParams.Bucket}/${item.uploadParams.Key}`,
-      CacheControl: 'max-age=5',
       ACL: item.uploadParams.ACL
     }
     html.compile(item.jsonFilePath, item.templatePath)

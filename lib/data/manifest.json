@@ -6,6 +6,7 @@
       "uploadParams": {
         "Key": "index.html",
         "Bucket": "newsdivide.bradoyler.com",
+        "CacheControl": "max-age=30",
         "ContentType": "text/html",
         "ACL": "public-read"
       }
@@ -15,6 +16,7 @@
       "jsonFilePath": "lib/data/test-sites.json",
       "uploadParams": {
         "Key": "index2.html",
+        "CacheControl": "max-age=180",
         "Bucket": "newsdivide.bradoyler.com",
         "ContentType": "text/html",
         "ACL": "public-read"
