@@ -18,25 +18,31 @@
 <meta name="twitter:creator" content="@thenewsdivide"/>
 <meta name="twitter:domain" content="thenewsdivide.com"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <meta name="twitter:image" content="https://thenewsdivide.com/day/{{date-slug}}/newsdivide.jpg"/>
 <title>The News Divide: {{date-short}}</title>
-<script type="text/javascript">
-  var baseUrl = 'https://thenewsdivide.com/day/{{date-slug}}/';
-</script>
 </head>
 <body class="sans-serif ph4-l w-80-l center">
-<div class="nav w-100 bg-white bb">
-  <ul class="list ma0 pa0 tc f5">
-    <li class="dib pt2">
-      <a class="link pointer ph3 pv1 br2 mb2 mh2 dib white bg-dark-gray" id="archive"href="/day/{{yesterday-slug}}/"> < {{yesterday-short}}</a>
-    </li>
-    <li class="dib pt2">
-      <a class="link pointer ph3 pv1 br2 mb2 mh2 dib gray bg-light-gray ba b--dark-gray" id="compact">Compact</a>
-    </li>
-    <li class="dib pt2">
-      <a class="link pointer ph3 pv1 br2 mb2 mh2 dib white bg-black" target="_blank" href="https://twitter.com/intent/tweet?source=tweetbutton&url=https://thenewsdivide.com/day/{{date-slug}}/&text={{date-short}}&via=thenewsdivide">Tweet</a>
-    </li>
-  </ul>
+<div class="nav w-100 bg-white bb tc">
+  <span class="tl dib pt1">
+    <a class="link pointer v-mid ph2 pb1 pv1 br2 mb1 dib white bg-dark-gray" id="archive"href="/day/{{yesterday-slug}}/">
+     <i class="material-icons md-light md-18" style="font-size: 18px;" >arrow_back</i>
+     <span class="v-top">{{yesterday-short}}</span>
+    </a>
+  </span>
+  <span class="dib pt1 tc" style="min-width:162px;">
+      {{date-short}}
+  </span>
+  <span class="dib pt1 tr">
+      <a id="zoom" class="link pointer ph2 pv1 br2 mb2 mh2 dib ba b--dark-gray">
+        <i id="zoom-icon" class="material-icons md-light md-18" style="font-size: 18px;" >zoom_in</i>
+      </a>
+  </span>
+  <span class="dib pt1 tr">
+      <a class="link pointer ph2 pv1 br2 mb2 dib white bg-black" target="_blank" href="https://twitter.com/intent/tweet?source=tweetbutton&url=https://thenewsdivide.com/day/{{date-slug}}/&text={{date-short}}&via=thenewsdivide">
+        <i class="material-icons md-light md-18" style="font-size: 18px;" >share</i>
+      </a>
+  </span>
 </div>
 <div class="container swiper-container">
   <div class="row swiper-wrapper">
@@ -55,7 +61,6 @@
     <a class="link black underline" target="blank" href="https://twitter.com/thenewsdivide">Feedback / Questions?</a>
   </h4>
 </div>
-
 <script type="text/javascript">
  var isMobile = (function () {
     var check = false;
@@ -64,24 +69,25 @@
     }
     return check;
  }());
+
  $(function(){
    var data = {{{sites}}};
    var jsDate = new Date();
-   var hour = new Date().getHours();
-   var min = Math.round(jsDate.getMinutes() / 9);
-   var minOfDay = hour + '_' + min;
+   // var hour = new Date().getHours();
+   // var min = Math.round(jsDate.getMinutes() / 9);
+   // var minOfDay = hour + '_' + min;
    var imageClasses = "center w-100 mb2"
    var linkClasses = "pa0 ma0"
+   var baseUrl = 'https://thenewsdivide.com/day/{{date-slug}}/'
 
    data.left_sites.forEach(function(page){
-     var imgUrl = baseUrl + page.image
-     $('.left_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${imgUrl}?min=${minOfDay}" /></a>`);
+     $('.left_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${baseUrl + page.image}" /></a>`);
    });
    data.center_sites.forEach(function(page){
-     $('.center_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${baseUrl + page.image}?min=${minOfDay}" /></a>`);
+     $('.center_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${baseUrl + page.image}" /></a>`);
    });
    data.right_sites.forEach(function(page){
-     $('.right_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${baseUrl + page.image}?min=${minOfDay}" /></a>`);
+     $('.right_sites').append(`<a class="${linkClasses}" href="${page.url}" target="blank"><img class="image ${imageClasses}" src="${baseUrl + page.image}" /></a>`);
    });
 
    var swipeEffect = isMobile ? 'coverflow' : 'slide';
@@ -106,30 +112,30 @@
     });
  });
 
-window.compactMode = JSON.parse(localStorage.getItem('_compact')) || false
+window._zoom = JSON.parse(localStorage.getItem('_zoom')) || false
 
-function initCompactMode() {
-  if (window.compactMode) {
-    $('#compact').addClass('o-50')
-    $('img').removeClass('w-100 center')
-    $('img').addClass('w-50 bn pa0 ma0 fl')
-    $('.swiper-slide').addClass('pa0 ma0')
-  } else {
-    $('#compact').removeClass('o-50')
+function initZoom() {
+  if (window._zoom) {
+    $('#zoom-icon').html('zoom_out')
     $('img').addClass('w-100 center')
     $('img').removeClass('w-50 bn pa0 ma0 fl')
+    $('.swiper-slide').addClass('pa0 ma0')
+  } else {
+    $('#zoom-icon').html('zoom_in')
+    $('img').removeClass('w-100 center')
+    $('img').addClass('w-50 bn pa0 ma0 fl')
     $('.swiper-slide').addClass('pa0 ma0')
   }
 }
 
-$('#compact').on('click', function () {
-  localStorage.setItem('_compact', !window.compactMode);
-  window.compactMode = !window.compactMode
-  initCompactMode();
+$('#zoom').on('click', function () {
+  localStorage.setItem('_zoom', !window._zoom);
+  window._zoom = !window._zoom
+  initZoom();
 });
 
 $(function() {
-  initCompactMode()
+  initZoom();
 });
 
  var refreshInt = 5 * 60 * 1000
