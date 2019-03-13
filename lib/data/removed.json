@@ -1,3 +1,4 @@
+[
 {
   "url": "https://ijr.com",
   "image": "ijr.com.jpg",
@@ -31,4 +32,5 @@
   "url":"http://www.cnn.com/politics",
   "image":"www.cnn.com_politics.jpg",
   "options": {"customCSS": "iframe{display:none !important}"}
-},
+}
+]
