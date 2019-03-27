@@ -1,8 +1,8 @@
 ## Newsdivide worker
 
-The screenshot worker queue that powers [NewsDivide.bradoyler.com](https://newsdivide.bradoyler.com/)
+The screenshot worker queue that powers [thenewsdivide.com](https://thenewsdivide.com/)
 
-![site](https://newsdivide.bradoyler.com/day/2017-08-19/newsdivide.jpg)
+![site](https://thenewsdivide.com/day/2017-08-19/newsdivide.jpg)
 
 ----
 
@@ -17,3 +17,4 @@ TODOs:
 - twitter bot
 - get working in 'Azure / Lambda functions'
 - better tests
+- better UI
