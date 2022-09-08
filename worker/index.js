@@ -13,9 +13,9 @@ const timeZone = 'America/New_York'
 const autostart = true // convenient flag for testing
 const cronJobs = []
 const cronSchedules = [
-  '1 2 1,5,6,7,8 * * *', // html updates
-  '1 */15 9-18 * * *', // peak hours
-  '1 2 20 * * *' // 8 pm update
+  '1 1 7,9 * * *', // html updates
+  '1 */20 10-17 * * *', // peak hours
+  '1 1 20 * * *' // 8 pm update
 ]
 const { defaults, apps, pages } = manifest
 let dayFolder = moment().tz('America/New_York').format('Y-MM-D')
