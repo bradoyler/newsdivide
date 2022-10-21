@@ -1,8 +1,8 @@
 {
   "apps": [
     {
-      "templatePath": "lib/templates/newsdivide.hbs",
-      "jsonFilePath": "lib/data/left-right.json",
+      "templatePath": "config/templates/newsdivide.hbs",
+      "jsonFilePath": "config/left-right.json",
       "uploadParams": {
         "Key": "index.html",
         "Bucket": "newsdivide.bradoyler.com",
@@ -12,8 +12,8 @@
       }
     },
     {
-      "templatePath": "lib/templates/newsdivide2.hbs",
-      "jsonFilePath": "lib/data/test-sites.json",
+      "templatePath": "config/templates/newsdivide2.hbs",
+      "jsonFilePath": "config/test-sites.json",
       "uploadParams": {
         "Key": "index2.html",
         "CacheControl": "max-age=180",
@@ -29,7 +29,7 @@
     "type": "jpeg",
     "quality": 80,
     "fullPage": false,
-    "injectFile": "lib/hideAds.js",
+    "injectFile": "lib/noop.js",
     "viewport": {
       "width": 375,
       "height": 667,

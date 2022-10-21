@@ -1,8 +1,8 @@
 {
   "apps": [
     {
-      "templatePath": "lib/templates/newsdivide.hbs",
-      "jsonFilePath": "lib/data/left-right.json",
+      "templatePath": "config/templates/newsdivide.hbs",
+      "jsonFilePath": "config/left-right.json",
       "uploadParams": {
         "Key": "index.html",
         "Bucket": "newsdivide.bradoyler.com",
@@ -11,8 +11,8 @@
       }
     },
     {
-      "templatePath": "lib/templates/nbcnews.hbs",
-      "jsonFilePath": "lib/data/nbcnews.json",
+      "templatePath": "config/templates/nbcnews.hbs",
+      "jsonFilePath": "config/nbcnews.json",
       "uploadParams": {
         "Key": "nbcnews.html",
         "Bucket": "newsdivide.bradoyler.com",

@@ -3,7 +3,7 @@ const moment = require('moment-timezone')
 const html = require('../../lib/generateHtml')
 const { saveBufferToS3, copyS3Object } = require('../../lib/persist')
 
-const { apps } = require('../../lib/data/manifest.json')
+const { apps } = require('../../config/manifest.json')
 const cronTime = '1 2 1,5,6,7,8 * * *'
 const timeZone = 'America/New_York'
 let dayFolder = moment().tz('America/New_York').format('Y-MM-D')

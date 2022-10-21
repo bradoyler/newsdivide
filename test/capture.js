@@ -1,10 +1,10 @@
 const capture = require('../lib/captureChrome')
-const manifest = require('../lib/data/manifest.json')
+const manifest = require('../config/manifest.json')
 const fs = require('fs')
 
 const { defaults, pages } = manifest
 
-const page = pages.find(page => page.url.includes('drudge'))
+const page = pages.find(page => page.url.includes('washington'))
 
 let browserRef = null
 capture.launch()
@@ -16,6 +16,6 @@ capture.launch()
     console.log(page, result)
     return result
   })
-  .then(result => fs.writeFileSync('test/images/' + page.image, result))
+  .then(result => fs.writeFileSync('test/' + page.image, result))
   .then(() => browserRef.close())
   .catch(err => console.log(err))

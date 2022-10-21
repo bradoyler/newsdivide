@@ -17,7 +17,7 @@ const dailyCopyParams = {
   ACL: uploadParams.ACL
 }
 
-html.compile('../lib/data/left-right.json', '../lib/templates/newsdivide.hbs')
+html.compile('../config/left-right.json', '../config/templates/newsdivide.hbs')
   .then(html => {
   // console.log('html:', html);
     return Buffer.from(html)

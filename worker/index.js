@@ -6,7 +6,7 @@ const persist = require('../lib/persist')
 const saveBufferToS3 = persist.saveBufferToS3
 const queue = require('../lib/queue')
 const html = require('../lib/generateHtml')
-const manifest = require('../lib/data/manifest.json')
+const manifest = require('../config/manifest.json')
 const htmlJob = require('./jobs/htmlJob')
 
 const timeZone = 'America/New_York'
