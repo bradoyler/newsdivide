@@ -5,10 +5,6 @@
       "image": "m.huffpost.com.jpg"
     },
     {
-      "url": "https://www.msnbc.com",
-      "image": "www.msnbc.com.jpg"
-    },
-    {
       "url": "https://www.nydailynews.com",
       "image": "www.nydailynews.com.jpg"
     },
@@ -23,6 +19,10 @@
     {
       "url": "https://news.vice.com",
       "image": "news.vice.com.jpg"
+    },
+    {
+      "url": "https://www.msnbc.com",
+      "image": "www.msnbc.com.jpg"
     },
     {
       "url": "https://www.motherjones.com",
@@ -73,10 +73,6 @@
       "image": "www.cnn.com.jpg"
     },
     {
-      "url": "https://www.washingtonpost.com",
-      "image": "www.washingtonpost.com.jpg"
-    },
-    {
       "url": "https://www.nytimes.com",
       "image": "www.nytimes.com.jpg"
     },
@@ -95,6 +91,10 @@
     {
       "url": "https://www.npr.org",
       "image": "www.npr.org.jpg"
+    },
+    {
+      "url": "https://www.washingtonpost.com",
+      "image": "www.washingtonpost.com.jpg"
     },
     {
       "url": "https://www.latimes.com",

@@ -29,7 +29,7 @@
     "type": "jpeg",
     "quality": 80,
     "fullPage": false,
-    "injectFile": "lib/noop.js",
+    "injectFile": "lib/hideAds.js",
     "viewport": {
       "width": 375,
       "height": 667,
@@ -62,7 +62,7 @@
       "image": "mobile.reuters.com.jpg"
     },
     {
-      "url": "http://www.nbcnews.com",
+      "url": "https://www.nbcnews.com",
       "image": "www.nbcnews.com.jpg"
     },
     {
@@ -91,7 +91,7 @@
       "image": "drudgereport.com.jpg"
     },
     {
-      "url": "http://www.msnbc.com",
+      "url": "https://www.msnbc.com",
       "image": "www.msnbc.com.jpg"
     },
     {
@@ -151,7 +151,7 @@
       "image": "www.nationalreview.com.jpg"
     },
     {
-      "url": "http://newsdivide.bradoyler.com",
+      "url": "https://thenewsdivide.com",
       "image": "newsdivide.jpg",
       "quality": 70,
       "viewport": {
@@ -161,7 +161,7 @@
       }
     },
     {
-      "url": "http://newsdivide.bradoyler.com",
+      "url": "https://thenewsdivide.com",
       "image": "newsdivide_FULL.jpg",
       "quality": 60,
       "fullPage": true,
